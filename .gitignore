@@ -1,0 +1,46 @@
+# OS / editor cruft
+.DS_Store
+.Rhistory
+.RData
+.RDataTmp
+.Rproj.user/
+.vscode/
+.idea/
+.ipynb_checkpoints/
+.jupyter/
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+scsa_env/
+*_env/
+
+# Data and outputs. This repository intentionally contains no data: see the
+# "Deliberately not here" section of README.md.
+*.rds
+*.Rds
+*.h5ad
+*.mtx
+*.mtx.gz
+*.RData
+*.db
+*.xlsx
+
+# Tabular data. datasets.csv is the exception -- it is configuration, not data.
+*.tsv
+*.tsv.gz
+*.csv
+!01-data-preparation/preprocessing/datasets.csv
+
+# Run artefacts and figures. The scripts that produce them are included.
+*.log
+*.png
+*.pdf
+*.svg
+results/
+recent_run_data/
+logs/
