@@ -1,4 +1,4 @@
-# scRNA-seq cell-type annotation benchmark — reference code
+# scRNA-seq cell-type annotation benchmark — reference code and runbook
 
 Reference implementation of the benchmarking harness behind a thesis comparing
 **63 single-cell RNA-seq cell-type annotation tool configurations** across five
