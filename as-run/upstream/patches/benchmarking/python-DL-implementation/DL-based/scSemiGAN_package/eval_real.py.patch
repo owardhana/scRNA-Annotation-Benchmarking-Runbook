@@ -1,0 +1,10 @@
+--- rafa-nadal/scSemiGAN@e851f7e/eval_real.py
++++ as-run/benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/eval_real.py
+@@ -19,2 +19,2 @@
+-import util
+-import scanpy.api as sc
++from scSemiGAN_package import util
++import scanpy as sc
+@@ -45 +45 @@
+-        self.x_sup_label_value = tf.placeholder(tf.int32, [135], name='x_sup_label_value')
++        self.x_sup_label_value = tf.placeholder(tf.int32, [None], name='x_sup_label_value')

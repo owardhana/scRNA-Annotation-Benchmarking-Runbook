@@ -1,0 +1,38 @@
+--- xuebaliang/scSemiCluster@075b295/codes/scSemiCluster_model.py
++++ as-run/benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/scSemiCluster_model.py
+@@ -6 +6 @@
+-from scSemiCluster_preprocess import *
++from scSemiCluster_package.scSemiCluster_preprocess import *
+@@ -24,3 +24,3 @@
+-    from sklearn.utils.linear_assignment_ import linear_assignment
+-    ind = linear_assignment(w.max() - w)
+-    return sum([w[i, j] for i, j in ind]) * 1.0 / y_pred.size
++    from scipy.optimize import linear_sum_assignment
++    row_ind, col_ind = linear_sum_assignment(w.max() - w)
++    return sum([w[i, j] for i, j in zip(row_ind, col_ind)]) * 1.0 / y_pred.size
+@@ -263,0 +264,2 @@
++        onehot_batch = label2matrix(batch_label).astype(np.float32)
++
+@@ -286,0 +289 @@
++                        self.batch: onehot_batch[batch_idx],
+@@ -300,0 +304 @@
++                        self.batch: onehot_batch[batch_idx],
+@@ -315,0 +320 @@
++                            self.batch: onehot_batch[batch_idx],
+@@ -327,0 +333 @@
++                    self.batch: onehot_batch,
+@@ -352,0 +359 @@
++                                self.batch: onehot_batch[batch_idx],
+@@ -363,0 +371 @@
++                            self.batch: onehot_batch,
+@@ -393 +401 @@
+-    Y = Y.astype(np.int)
++    Y = Y.astype(int)
+@@ -411 +419 @@
+-        high_variable = np.array(adata.var.highly_variable.index, dtype=np.int)
++        high_variable = np.array(adata.var.highly_variable.index, dtype=int)
+@@ -414,2 +422,2 @@
+-        select_genes = np.array(adata.var.index, dtype=np.int)
+-        select_cells = np.array(adata.obs.index, dtype=np.int)
++        select_genes = np.array(adata.var.index, dtype=int)
++        select_cells = np.array(adata.obs.index, dtype=int)

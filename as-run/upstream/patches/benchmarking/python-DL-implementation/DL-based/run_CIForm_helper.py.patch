@@ -1,0 +1,163 @@
+--- zhanglab-wbgcas/CIForm@fda67c7/CIForm_AnnData.py
++++ as-run/benchmarking/python-DL-implementation/DL-based/run_CIForm_helper.py
+@@ -13 +12,0 @@
+-torch.set_default_tensor_type(torch.DoubleTensor)
+@@ -16,0 +16,6 @@
++
++# Set device and tensor type based on availability
++# Force CPU mode due to RTX 5060 sm_120 incompatibility with PyTorch 2.3.1
++device = torch.device('cpu')
++torch.set_default_tensor_type(torch.DoubleTensor)
++print("Using CPU (RTX 5060 sm_120 incompatible with PyTorch 2.3.1)")
+@@ -60 +65 @@
+-            i = str(i).upper()
++            i = str(i).lower()
+@@ -72 +77 @@
+-        cell = str(cell).upper()
++        cell = str(cell).lower()
+@@ -165,2 +170,3 @@
+-    cell_types = np.unique(train_labels)
+-    num_classes = len(cell_types) + 1
++    # CRITICAL FIX: Do NOT overwrite cell_types with np.unique(train_labels)
++    # This was causing label mismatch between encoding and decoding
++    num_classes = len(train_cellTypes) + 1
+@@ -171 +177 @@
+-                   num_classes=num_classes ,dropout=dp)
++                   num_classes=num_classes, dropout=dp).to(device)
+@@ -186,0 +193,8 @@
++    # Debug: Print label mapping to verify correctness
++    print(f"\n=== Label Mapping ===")
++    print(f"Encoding used for training:")
++    for idx, ct in enumerate(cell_types):
++        print(f"  {ct} → {idx + 1}")
++    print(f"Decoding will use:")
++    for idx, ct in enumerate(new_cellTypes):
++        print(f"  {idx} → {ct}")
+@@ -197,0 +212 @@
++            data, labels = data.to(device), labels.to(device)
+@@ -199 +214 @@
+-            labels = torch.tensor(labels, dtype=torch.long)
++            labels = torch.tensor(labels, dtype=torch.long).to(device)
+@@ -224,0 +240 @@
++        data = data.to(device)
+@@ -232 +248,15 @@
+-    return y_predicts
++    # Map numerical predictions to cell type names
++    mapped_predictions = [new_cellTypes[pred] if pred < len(new_cellTypes) else "unassigned"
++                         for pred in y_predict]
++
++    # Print prediction statistics
++    from collections import Counter
++    pred_distribution = Counter(mapped_predictions)
++    print(f"\n=== CIForm Prediction Statistics ===")
++    print(f"Total predictions: {len(mapped_predictions)}")
++    print(f"Prediction distribution:")
++    for celltype, count in sorted(pred_distribution.items()):
++        pct = 100 * count / len(mapped_predictions)
++        print(f"  {celltype}: {count} ({pct:.1f}%)")
++
++    return mapped_predictions
+@@ -235 +265,3 @@
+-s = 1024
++if __name__ == "__main__":
++    # Example/test code - only runs when script is executed directly
++    s = 1024
+@@ -236,0 +269,4 @@
++    import os
++    import time as tm
++    from sklearn.metrics import *
++    from sklearn.model_selection import train_test_split
+@@ -238,4 +274,6 @@
+-import os
+-import time as tm
+-from sklearn.metrics import *
+-from sklearn.model_selection import train_test_split
++    tissues = "Root"
++    path = "../../Datasets/Arabidopsis thaliana/" + tissues  + "/"
++    data_name = "03SRP330542"
++    test_paths = [path]
++    test_names = [data_name + ".h5ad"]
++    topgenes = 2000
+@@ -242,0 +281,5 @@
++    adata_mod1 = sc.read_h5ad(test_paths[0] + test_names[0])
++    adata_mod1.var_names_make_unique()
++    adata_mod1.obs['domain_id'] = 0
++    sc.pp.highly_variable_genes(adata_mod1, n_top_genes=topgenes)
++    adata_mod1 = adata_mod1[:, adata_mod1.var['highly_variable']]
+@@ -244,6 +287,3 @@
+-tissues = "Root"
+-path = "../../Datasets/Arabidopsis thaliana/" + tissues  + "/"
+-data_name = "03SRP330542"
+-test_paths = [path]
+-test_names = [data_name + ".h5ad"]
+-topgenes = 2000
++    X = adata_mod1.X  # obsm['X_pca']#.todense()
++    if not isinstance(X, np.ndarray):
++        X = X.todense()
+@@ -251,5 +291,4 @@
+-adata_mod1 = sc.read_h5ad(test_paths[0] + test_names[0])
+-adata_mod1.var_names_make_unique()
+-adata_mod1.obs['domain_id'] = 0
+-sc.pp.highly_variable_genes(adata_mod1, n_top_genes=topgenes)
+-adata_mod1 = adata_mod1[:, adata_mod1.var['highly_variable']]
++    X = np.asarray(X)
++    print("X.shape", X.shape)
++    Y = adata_mod1.obs['Celltype'].to_numpy()
++    print("Y.shape", Y.shape)
+@@ -257,3 +296,5 @@
+-X = adata_mod1.X  # obsm['X_pca']#.todense()
+-if not isinstance(X, np.ndarray):
+-    X = X.todense()
++    test_size = 0.99
++    ref_adata, query_adata, y_train, y_test = train_test_split(adata_mod1, Y, test_size=test_size, random_state=2024)
++    print("ref_adata",ref_adata)
++    print("query_adata",query_adata)
++    start = tm.time()
+@@ -261,4 +302,3 @@
+-X = np.asarray(X)
+-print("X.shape", X.shape)
+-Y = adata_mod1.obs['Celltype'].to_numpy()
+-print("Y.shape", Y.shape)
++    preds = ciForm(s ,ref_adata ,y_train ,query_adata,n_epochs=50)
++    end = tm.time()
++    all_time = end - start
+@@ -266,5 +306,3 @@
+-test_size = 0.99
+-ref_adata, query_adata, y_train, y_test = train_test_split(adata_mod1, Y, test_size=test_size, random_state=2024)
+-print("ref_adata",ref_adata)
+-print("query_adata",query_adata)
+-start = tm.time()
++    acc = accuracy_score(y_test, preds)
++    f1 = f1_score(y_test, preds, average='macro')
++    print("acc", acc, "f1", f1)
+@@ -272,3 +310,4 @@
+-preds = ciForm(s ,ref_adata ,y_train ,query_adata,n_epochs=50)
+-end = tm.time()
+-all_time = end - start
++    log_txt = "log/Intra_split/"+ tissues + "/" + data_name + "/"
++    last_path = log_txt + "test_size=" + str(test_size)
++    if (not os.path.isdir(log_txt)):
++        os.makedirs(log_txt)
+@@ -276,3 +315,6 @@
+-acc = accuracy_score(y_test, preds)
+-f1 = f1_score(y_test, preds, average='macro')
+-print("acc", acc, "f1", f1)
++    np.save(last_path + "_pred", preds)
++    with open(log_txt + "end_test.txt", "a") as f:
++        f.writelines("log_dir:" + last_path + "\n")
++        f.writelines("acc:" + str(acc) + "\n")
++        f.writelines("f1:" + str(f1) + "\n")
++        f.writelines("all_time:" + str(all_time) + "\n")
+@@ -280,12 +321,0 @@
+-log_txt = "log/Intra_split/"+ tissues + "/" + data_name + "/"
+-last_path = log_txt + "test_size=" + str(test_size)
+-if (not os.path.isdir(log_txt)):
+-    os.makedirs(log_txt)
+-
+-np.save(last_path + "_pred", preds)
+-with open(log_txt + "end_test.txt", "a") as f:
+-    f.writelines("log_dir:" + last_path + "\n")
+-    f.writelines("acc:" + str(acc) + "\n")
+-    f.writelines("f1:" + str(f1) + "\n")
+-    f.writelines("all_time:" + str(all_time) + "\n")
+-

@@ -1,0 +1,14 @@
+--- aimeeyaoyao/scGAD@3328eda/code/utils.py
++++ as-run/benchmarking/python-DL-implementation/DL-based/scGAD_package/utils.py
+@@ -5 +5,4 @@
+-import jgraph
++try:
++    import jgraph
++except ImportError:
++    jgraph = None
+@@ -54 +57 @@
+-                ).astype(np.int)
++                ).astype(int)
+@@ -58 +61 @@
+-                ).astype(np.int))
++                ).astype(int))

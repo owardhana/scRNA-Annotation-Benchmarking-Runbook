@@ -1,0 +1,47 @@
+Google Colab runtime used for the Phase 5 foundation models
+===========================================================
+
+Notebooks: as-run/foundation-models/*.ipynb. Everything below is read from the
+notebooks themselves (their Colab metadata, install cells and the saved outputs
+of their last execution, before the outputs were cleared for release). Colab
+runtimes are not versioned, so this is a record, not a lockfile.
+
+Runtime
+-------
+GPU         NVIDIA L4 (scBERT, scGPT, scFoundation, Geneformer; Colab "L4", high-RAM)
+            NVIDIA RTX PRO 6000 Blackwell Server Edition, 102 GB VRAM (C2S; Colab "G4", high-RAM)
+pandas      2.3.3 (pip's resolver warning in every notebook: Colab's own pin was 2.2.2)
+Python      3.12, from the package paths in C2S_FT.ipynb's output
+            (/usr/local/lib/python3.12/dist-packages); the other notebooks do not show it
+
+Per notebook
+------------
+notebook                        last executed   GPU   installs (cell as written)                                   versions printed
+C2S_FT.ipynb                    2026-05-27      G4    cell2sentence==1.1.0 memory_profiler scanpy anndata          PyTorch 2.11.0+cu128; transformers 5.x
+geneformer_pretrained.ipynb     2026-05-27      L4    transformers scanpy anndata scikit-learn                     transformers 5.0.0
+scBERT_pretrained.ipynb         2026-06-05      L4    performer-pytorch==1.1.4 einops scanpy anndata scikit-learn  -
+scFoundation_pretrained.ipynb   2026-05-27      L4    scanpy anndata scikit-learn; local_attention einops          -
+scGPT_pretrained.ipynb          2026-05-27      L4    scanpy anndata scikit-learn                                  -
+
+Only cell2sentence and performer-pytorch were pinned; the other packages are
+whatever Colab's base image and pip resolved on those dates. The "last executed"
+date is the last run of the notebook, which may be later than the runs that
+produced every row in results/P8b FM - Real/.
+
+Model weights and code
+----------------------
+C2S           vandijklab/C2S-Pythia-410m-cell-type-prediction (Hugging Face)
+Geneformer    ctheodoris/Geneformer, subfolder Geneformer-V2-104M, with the gc104M
+              token and gene-median dictionaries (Hugging Face)
+scGPT         wanglab/scGPT-human best_model.pt and vocab.json (Hugging Face)
+scFoundation  genbio-ai/scFoundation models.ckpt (Hugging Face); model code cloned
+              from https://github.com/biomap-research/scFoundation at run time
+scBERT        panglao_pretrain.pth, gene2vec_16906.npy and panglao_10000.h5ad, read
+              from Google Drive (the file names of the checkpoint, gene embedding and
+              reference panel the scBERT authors distribute); model code cloned from
+              https://github.com/TencentAILabHealthcare/scBERT at run time
+
+The notebooks read the weights, and the inputs (h5ad_real/<object>.h5ad, AnnData
+copies of the panel objects written by
+as-run/preprocessing/real-datasets/load_anndata_P5.ipynb; not deposited), from a
+Google Drive folder ("Thesis FM Computing"). Set DRIVE_ROOT to your own copy.

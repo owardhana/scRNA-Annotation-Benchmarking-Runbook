@@ -1,0 +1,95 @@
+L9 BENCHMARK — SANITY CHECK REPORT
+======================================================================
+Generated : 2026-03-25 01:45:11.972926
+Generator : l9 Generator.R
+Scenarios : S1, S2, S3, S4, S5, S6, S7, S8, S9
+Seed      : 42 (replicate 1 only)
+
+[PASS]  S1
+    Sparsity     : 86.8%  (threshold: 72-88%)
+    Median UMI   : 4813  (threshold: 2000-10000)
+    Min type n   : 86  (threshold: >=5)
+    Mean FC_up   : 4.81x  (upregulated direction only)
+
+[PASS]  S2
+    Sparsity     : 86.1%  (threshold: 72-88%)
+    Median UMI   : 4746  (threshold: 2000-10000)
+    Min type n   : 11  (threshold: >=5)
+    Mean FC_up   : 2.42x  (upregulated direction only)
+
+[PASS]  S3
+    Sparsity     : 85.9%  (threshold: 72-88%)
+    Median UMI   : 4818  (threshold: 2000-10000)
+    Min type n   : 1  (threshold: >=5)
+    Mean FC_up   : 1.57x  (upregulated direction only)
+
+[PASS]  S4
+    Sparsity     : 85.8%  (threshold: 72-88%)
+    Median UMI   : 4880  (threshold: 2000-10000)
+    Min type n   : 175  (threshold: >=5)
+    Mean FC_up   : 1.56x  (upregulated direction only)
+
+[PASS]  S5
+    Sparsity     : 86.8%  (threshold: 72-88%)
+    Median UMI   : 4880  (threshold: 2000-10000)
+    Min type n   : 37  (threshold: >=5)
+    Mean FC_up   : 4.85x  (upregulated direction only)
+
+[PASS]  S6
+    Sparsity     : 86.0%  (threshold: 72-88%)
+    Median UMI   : 4902  (threshold: 2000-10000)
+    Min type n   : 75  (threshold: >=5)
+    Mean FC_up   : 2.42x  (upregulated direction only)
+
+[PASS]  S7
+    Sparsity     : 85.7%  (threshold: 72-88%)
+    Median UMI   : 4920  (threshold: 2000-10000)
+    Min type n   : 432  (threshold: >=5)
+    Mean FC_up   : 2.40x  (upregulated direction only)
+
+[PASS]  S8
+    Sparsity     : 85.6%  (threshold: 72-88%)
+    Median UMI   : 4920  (threshold: 2000-10000)
+    Min type n   : 1141  (threshold: >=5)
+    Mean FC_up   : 1.55x  (upregulated direction only)
+
+[PASS]  S9
+    Sparsity     : 86.5%  (threshold: 72-88%)
+    Median UMI   : 4918  (threshold: 2000-10000)
+    Min type n   : 150  (threshold: >=5)
+    Mean FC_up   : 4.86x  (upregulated direction only)
+
+
+DIFFICULTY GRADIENT CHECK (5-type scenarios: S1=easy, S6=medium, S8=hard)
+----------------------------------------------------------------------
+S1 (easy)   PC1 var : 5.3%
+S6 (medium) PC1 var : 1.8%
+S8 (hard)   PC1 var : 1.0%
+Ratio easy/hard     : 5.2x
+
+PLOTS (inspect manually — all 9 scenarios)
+----------------------------------------------------------------------
+  sanity_check_plots/sanity_S1.pdf
+  sanity_check_plots/sanity_S2.pdf
+  sanity_check_plots/sanity_S3.pdf
+  sanity_check_plots/sanity_S4.pdf
+  sanity_check_plots/sanity_S5.pdf
+  sanity_check_plots/sanity_S6.pdf
+  sanity_check_plots/sanity_S7.pdf
+  sanity_check_plots/sanity_S8.pdf
+  sanity_check_plots/sanity_S9.pdf
+
+NEXT STEPS
+----------------------------------------------------------------------
+If all checks pass AND PCA plots look correct:
+  → Run l9_benchmark_generator.R to generate all 27 datasets
+
+If sparsity/UMI checks fail:
+  → Adjust dropout.mid or lib.loc in FIXED_PARAMS
+
+If FC checks fail:
+  → Adjust de.facLoc in DE_LEVELS
+
+If difficulty gradient is flat (easy ≈ hard in PCA):
+  → Widen the de.facLoc gap between easy and hard levels
+  → Or increase bcv.common to add realistic within-type noise

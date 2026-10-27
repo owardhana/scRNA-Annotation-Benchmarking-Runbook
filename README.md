@@ -1,163 +1,103 @@
-# scRNA-seq cell-type annotation benchmark — reference code and runbook
+# scRNA-seq cell-type annotation benchmark — code
 
-Reference implementation of the benchmarking harness behind a thesis comparing
-**63 single-cell RNA-seq cell-type annotation tool configurations** across five
-phases, from controlled synthetic simulation to deployment-realistic conditions.
+Code for
 
-**This is reference code, not the complete analysis codebase.** It exists so a
-reader of the manuscript can see how the benchmark is built: the harness
-architecture, the tool-wrapper interface, the preprocessing pipeline, and the
-dataflow between them. It carries one worked wrapper per methodological
-paradigm rather than all 63, and no data.
+> Wardhana O, Zeng Z, Lu X. **Reference dataset structure outweighs method choice
+> in single-cell cell-type annotation.**
 
-If you want the design rationale in one document, start with
-**[docs/architecture.md](docs/architecture.md)**.
+The study benchmarks 63 cell-type annotation tool configurations from seven
+families (marker-based, similarity-based, classical machine learning, deep
+learning, semi-supervised, large language model, and fine-tuned foundation
+models) in five settings: a Taguchi L9(3⁴) factorial simulation, a nine-dataset
+real panel matched to it, cross-platform transfer, database- and LLM-driven
+annotation, and foundation-model fine-tuning.
 
----
-
-## The shape of the problem
-
-Comparing 63 annotation tools is mostly a plumbing problem. They disagree about
-nearly everything — raw counts versus log-normalised expression versus a PCA
-embedding; labelled reference cells versus a marker list versus a text prompt;
-R packages, Python packages with mutually incompatible dependencies, and
-network APIs. Left alone, each tool preprocesses the data its own way and the
-comparison measures the plumbing.
-
-Two rules hold the benchmark together:
-
-1. **One preprocessing pipeline, applied once per dataset, before any tool
-   runs.** Tools receive an object that is already filtered, normalised,
-   reduced and split.
-2. **One wrapper interface, identical across paradigms.** Every tool is reached
-   through the same signature and returns the same shape:
-
-   ```r
-   run_<TOOL>_function(seurat_train, seurat_test, markers) -> list(
-     predictions, true_labels, confidence_scores, cell_ids,
-     runtime_secs, peak_system_memory_mb
-   )
-   ```
-
-   Same signature for a marker tool that ignores `seurat_train`, a classifier
-   that trains on it, and an LLM that sends gene names over the network.
+**Data.** The processed input objects and every per-run result table are on
+Zenodo, [doi:10.5281/zenodo.23695089](https://doi.org/10.5281/zenodo.23695089). Raw data are at their original
+accessions, listed in
+[`harness/01-data-preparation/preprocessing/datasets.csv`](harness/01-data-preparation/preprocessing/datasets.csv)
+and in Supplementary Table 1 of the paper.
 
 ---
 
-## Layout
+## What is here
 
-```
-01-data-preparation/     simulation, preprocessing, loaders, dataset profiling
-02-benchmarking-harness/ the harness itself — R and Python, side by side
-03-analysis-example/     one representative downstream analysis script
-docs/                    architecture, wrapper contract, tool roster, runbook
-```
-
-### [`01-data-preparation/`](01-data-preparation/)
-
-Preprocessing runs in **two stages**, and the split is the point. Stage 1 is
-per-dataset and full of special cases — this dataset keeps its labels in
-`WGCNAcluster`, that one needs Ensembl IDs mapped to symbols, this mouse
-dataset needs case folding. All of it is declared in `datasets.csv` and driven
-by one script. Stage 2 is a single pipeline with no branches, applied
-identically to everything, with an R version and a step-for-step Scanpy twin.
-
-Splitting them is what makes "every dataset had identical preprocessing"
-checkable rather than merely asserted: stage 2 has nowhere to hide a
-per-dataset exception.
-
-Also here: the seeded Splatter generator for the Phase 1 L9(3⁴) design, and the
-ten-metric profiling and Borda-count procedure used to map real datasets onto
-synthetic scenarios.
-
-### [`02-benchmarking-harness/`](02-benchmarking-harness/)
-
-Two harnesses. The R one carries most of the roster; the Python one exists
-because the deep-learning and semi-supervised paradigms are Python-native and
-several of those tools cannot be driven from R at all.
-
-They differ in more than language — different resource keys, different marker
-derivation, in-process versus conda-subprocess isolation. The differences are
-catalogued in [docs/architecture.md](docs/architecture.md#r-and-python-are-not-interchangeable)
-rather than papered over.
-
-### [`03-analysis-example/`](03-analysis-example/)
-
-One of the nine per-phase analysis scripts, kept as an example of the
-downstream pattern. The other eight are omitted by design.
-
----
-
-## Manuscript phases
-
-| Phase | What it tests | Execution mode |
+| Folder | What it is | Use it to |
 |---|---|---|
-| 1 | Factorial Splatter simulation, Taguchi L9(3⁴), oracle inputs — main-effect attribution | single 80/20 split |
-| 2 | Nine within-platform real datasets — does the Phase 1 structure survive real biology? | single 80/20 split |
-| 3 | Cross-platform transfer across three technology blocks | separate datasets |
-| 4 | Database-connected marker tools and LLM tools, ontology-aware scoring | full dataset |
-| 5 | Fine-tuned transformer foundation models | single 80/20 split |
+| [`reproduce/`](reproduce/) | The analysis, statistics and figure scripts, with a runner | **Regenerate every number and figure in the paper** from the Zenodo data, without re-running any tool |
+| [`as-run/`](as-run/) | Every script exactly as the study executed it: preprocessing, all tool wrappers, the driver, LLM scoring | See precisely what ran |
+| [`harness/`](harness/) | A documented reimplementation of the benchmarking harness (R and Python), one worked wrapper per family, design docs | Understand the design, or benchmark a new tool the same way |
+| [`environments/`](environments/) | R and Python package versions, the Colab runtime, and the install recipes of the per-tool conda environments | Rebuild the software environment |
 
----
+## Reproducing the paper
 
-## Deliberately not here
+There are two levels, and they come with different guarantees.
 
-Gaps you will notice, and why they are decisions rather than omissions:
+**1. From the deposited results (exact).** Download the data bundle from Zenodo
+([doi:10.5281/zenodo.23695089](https://doi.org/10.5281/zenodo.23695089)), unzip it, then:
 
-- **All data.** No datasets, intermediate results or figures. Phase 1 data
-  regenerates deterministically from the seeded generator; the real datasets are
-  publicly available and their sources are recorded in
-  `01-data-preparation/preprocessing/datasets.csv`.
-- **Foundation-model wrappers.** Phase 5 ran in Google Colab against
-  provider-specific notebooks, not through either harness here. Shipping
-  partial notebooks would misrepresent how it was run.
-- **55 of the 63 tool wrappers.** One exemplar per paradigm plus an annotated
-  template; the full roster is in [docs/tool-roster.md](docs/tool-roster.md).
-- **Eight of the nine analysis scripts**, and all figure generation.
-- **CellMarker 2.0.** Redistributed by its authors; obtain it from the official
-  source.
-
----
-
-## Documentation
-
-| | |
-|---|---|
-| [architecture.md](docs/architecture.md) | Dataflow, execution modes, metrics, R/Python divergences |
-| [tool-wrapper-contract.md](docs/tool-wrapper-contract.md) | The interface every tool implements |
-| [tool-roster.md](docs/tool-roster.md) | All 63 configurations; what ships, what was excluded |
-| [marker-filtering.md](docs/marker-filtering.md) | `prepare_markers()` and why there is no p-value cutoff |
-| [resource-profiling.md](docs/resource-profiling.md) | What the runtime and memory numbers cover |
-| [phase-1-runbook.md](docs/phase-1-runbook.md) | Reproducing Phase 1 on one workstation |
-| [environments/](docs/environments/) | R package list and per-tool conda recipes |
-
----
-
-## Getting started
-
-Reading order, if you want to understand the harness:
-
-1. [docs/architecture.md](docs/architecture.md) — the dataflow diagram
-2. [`R/tools/run_scSorter.R`](02-benchmarking-harness/R/tools/run_scSorter.R) —
-   the simplest complete wrapper
-3. [docs/tool-wrapper-contract.md](docs/tool-wrapper-contract.md) — the rules
-   that wrapper is following
-4. [`R/benchmarking_helpers.R`](02-benchmarking-harness/R/benchmarking_helpers.R) —
-   metrics and the five execution modes
-
-Running something:
-
-```r
-setwd("02-benchmarking-harness/R")
-source("run_benchmark.R")
-available_tools()
+```bash
+reproduce/run_all.sh /path/to/bundle numbers
 ```
 
-Sourcing loads the harness and registers the shipped wrappers; it does not
-start a run. See [docs/phase-1-runbook.md](docs/phase-1-runbook.md).
+```bash
+reproduce/run_all.sh /path/to/bundle figures
+```
 
----
+This recomputes the statistics quoted in the text and the main and
+supplementary figures from the tool-level result tables. On a fresh copy of the
+bundle, every statistic script reproduces the authors' output byte for byte, and
+the regenerated figures carry the published values. Details, the limits (Figure 1
+needs `cairosvg`; Supplementary Fig. 2 needs a one-line change), the map from each
+figure, table and number to its script, and the requirements are in
+[`reproduce/README.md`](reproduce/README.md).
+
+**2. Re-running the tools (best effort).** The benchmarked objects are in the
+bundle (`benchmarking/data/`), with the 80/20 split seeds in `datasets.csv` (123;
+124 for real-data S3). The wrappers that produced the results are in `as-run/`.
+Sixteen files of tool code copied from repositories that publish no licence are not
+redistributed; `python3 as-run/fetch_upstream.py` downloads them at their pinned
+commits and re-applies the study's edits ([`as-run/NOTES.md`](as-run/NOTES.md)). A
+re-run depends on the tool versions in `environments/`, a GPU for the deep-learning
+and foundation-model tools, and API access for the LLM tools, whose models change
+over time. Expect close but not identical numbers. The Phase 1 synthetic data can
+be regenerated deterministically: see
+[`harness/docs/phase-1-runbook.md`](harness/docs/phase-1-runbook.md).
+
+## Mapping the paper to the code
+
+| Paper | Ran with | Results in the data bundle |
+|---|---|---|
+| Phase 1 — factorial simulation | `as-run/preprocessing/synthetic-L9/`, `as-run/benchmarking/` | `results/P4 Synthetic Datasets V1/` |
+| Phase 2 — real-data panel | `as-run/preprocessing/real-datasets/`, `as-run/benchmarking/` | `results/P5 Real Life Datasets V2/` |
+| Phase 3 — cross-platform transfer | `as-run/preprocessing/cross-platform/`, `as-run/benchmarking/` | `results/P9 Cross Dataset/` |
+| Phase 4 — database markers and LLMs | `as-run/benchmarking/database-based/`, `LLM-based/`, `as-run/scoring/` | `results/P7a …/`, `results/P7b …/` |
+| Phase 5 — foundation models | `as-run/foundation-models/` (Google Colab notebooks) | `results/P8b …/` (reported); `results/P8a …/` (synthetic arm, not reported) |
+| Derived-marker supplement | `as-run/benchmarking/marker-based/` | `results/P6a …/`, `results/P6b …/` |
+
+The folder names (`P4`, `P5`, …) are the study's working names, kept so the paths
+in the scripts resolve.
+
+## Not included
+
+- **Raw data**, available from the accessions above.
+- **CellMarker 2.0**, used by the Phase 4 database tools. It is distributed by its
+  authors; obtain it from the official source. SCSA's bundled `whole.db` ships
+  with SCSA.
+- **API keys.** The LLM tools read them from environment variables; none is stored here.
+
+## Citation
+
+Please cite the article above. To cite the data, use
+[doi:10.5281/zenodo.23695089](https://doi.org/10.5281/zenodo.23695089); to cite the code, use
+[doi:10.5281/zenodo.23698288](https://doi.org/10.5281/zenodo.23698288). Both DOIs cover all versions and open the
+latest one. The metadata are in [`CITATION.cff`](CITATION.cff).
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+The authors' code: MIT ([`LICENSE`](LICENSE)). A few files carry code from other
+projects and keep their upstream licences (SCSA and ACTINN, GPL-3.0; NeuCA,
+GPL-2; MARS and the figure helpers, MIT); they are listed in
+[`THIRD_PARTY.md`](THIRD_PARTY.md), with the unlicensed tool code that is restored
+rather than redistributed.
+The data bundle is released under CC BY 4.0.

@@ -1,0 +1,8 @@
+--- xuebaliang/scSemiCluster@075b295/codes/scSemiCluster_preprocess.py
++++ as-run/benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/scSemiCluster_preprocess.py
+@@ -4 +4 @@
+-import scSemiCluster_utils as utils
++from scSemiCluster_package import scSemiCluster_utils as utils
+@@ -9 +9 @@
+-import scanpy.api as sc
++import scanpy as sc

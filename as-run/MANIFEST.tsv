@@ -1,0 +1,212 @@
+path	source	source_sha256	edits
+benchmarking/Benchmarking.R	benchmarking/Benchmarking.R	3897e9db7f4fc5c89bd90ba7965db00623833085ec11ef1c5a2766f47c5336a9	
+benchmarking/Install Notes DL.txt	benchmarking/Install Notes DL.txt	16cf142c80788023e5d4e306d351859858466f2e08adc74e1b2c9388652c1261	paths-scrubbed:1
+benchmarking/Install_Notes.R	benchmarking/Install_Notes.R	9d85bcdb81dd1f66aedcb964bba9abc2fb54ba234eb5d9a41210d47cff6d600c	
+benchmarking/MARKER_FILTERING_STANDARDIZATION.md	benchmarking/MARKER_FILTERING_STANDARDIZATION.md	0019b726cf19e0ce554772ad8b4e50de002675e9eafe774f3825fc50e8c9edd8	
+benchmarking/MEMORY_AND_MARKERS_AUDIT.md	benchmarking/MEMORY_AND_MARKERS_AUDIT.md	b4839f6d2cccf336edae14db110f22e8ee654d1c786661ebb9c5897354c77679	
+benchmarking/benchmarking_helpers.R	benchmarking/benchmarking_helpers.R	b90a5301d9fcd9692c288e1d8f1a837661c61fa81641ff49732865a7ffbd00f1	
+benchmarking/DL-based/run_CAMLU.R	benchmarking/DL-based/run_CAMLU.R	249efd6f7e1148ce67d3667122ab30c13ca4b388a0361fd646d6bcfc789c6c6d	
+benchmarking/DL-based/run_NeuCA.R	benchmarking/DL-based/run_NeuCA.R	f51c36e90482a4c4815022f108c6d74765c8d10b2ba454454b40755362c17447	
+benchmarking/DL-based/run_scLearn.R	benchmarking/DL-based/run_scLearn.R	9e7cc98a23a4179325dfdc82967afc56447b3beb1f4a42bdc18a9788217e8236	
+benchmarking/DL-based/NeuCA_helpers/functions_NN.R	benchmarking/DL-based/NeuCA_helpers/functions_NN.R	982f8334f31ff49321e2c3dd73eaa43731dcd2ac4599748ccb5d7a42dbd748c8	
+benchmarking/DL-based/NeuCA_helpers/functions_mhNN.R	benchmarking/DL-based/NeuCA_helpers/functions_mhNN.R	2bf469020a02b1b8dc513ec82ab9a16e13a65f96bfabca05c6ffcaf920ba142d	
+benchmarking/DL-based/NeuCA_helpers/utils.R	benchmarking/DL-based/NeuCA_helpers/utils.R	133242dd8eff6a672d08b05a93904d5d0fec63d761c1fb63ddcac9c47b3ba280	
+benchmarking/LLM-based/normalisation_pipeline.R	benchmarking/LLM-based/normalisation_pipeline.R	db89febcd083174515ee22009365b22a9bdb00219d3130171967bccd47916865	
+benchmarking/LLM-based/run_CASSIA.R	benchmarking/LLM-based/run_CASSIA.R	550383690004bd5838fac8d2084f4491f408cd98bfc5c91cb57723423fc069c1	
+benchmarking/LLM-based/run_GPTCelltype.R	benchmarking/LLM-based/run_GPTCelltype.R	cc107cbd194635aaa10312c3a2f16fd1cd25116c92115fc98c5f204b87c2c1e9	
+benchmarking/LLM-based/run_mLLMCelltype.R	benchmarking/LLM-based/run_mLLMCelltype.R	0950110cab9b281ff26e4d5a558ef5fcc684a7114704821fe575986737ce43a0	
+benchmarking/classic-ML-based/CaSTLe_helper.R	benchmarking/classic-ML-based/CaSTLe_helper.R	e1ee4a447365a55264e1dc3957e64bec5156c14061b31d15660806fc7f40c70a	
+benchmarking/classic-ML-based/callr_core.R	benchmarking/classic-ML-based/callr_core.R	9401ce5153da15e14f4b26f8bf68f3f3016846494c744d7f87b4d8ead28a95b2	
+benchmarking/classic-ML-based/celltypist_helper.py	benchmarking/classic-ML-based/celltypist_helper.py	e00690a34cf42a4e5946dfc06ea757953cf45150b2af7f5b32c202982da1315c	
+benchmarking/classic-ML-based/run_CALLR.R	benchmarking/classic-ML-based/run_CALLR.R	3ba86f53aa5fa14ed0ffa83a4d30ead04527d5b52a6c089aa9344468863eb2e7	
+benchmarking/classic-ML-based/run_CHETAH.R	benchmarking/classic-ML-based/run_CHETAH.R	571db7fad499f04855146bddcbb569d9f4fe4441d3695bedfb83226694ac11ee	
+benchmarking/classic-ML-based/run_CaSTLe.R	benchmarking/classic-ML-based/run_CaSTLe.R	ad6b7a79f53073bb0ff9c0d1a05a61ac2414f32118222283dfed37240671cecd	
+benchmarking/classic-ML-based/run_CellTypist.R	benchmarking/classic-ML-based/run_CellTypist.R	69fe958adb10e60f5f7d55682f0c8d48b189905c740006142d44f133a2459f19	
+benchmarking/classic-ML-based/run_scAnnotatR.R	benchmarking/classic-ML-based/run_scAnnotatR.R	50f04771cf47723a012da7744e8b24cd9c249ea61a2bf32cc87b90a470755f98	
+benchmarking/classic-ML-based/run_scAnnotate.R	benchmarking/classic-ML-based/run_scAnnotate.R	847c9b4a59cde20d04ec7c24c6861d7eef14f1f488e5511e66bc988e9b5896a6	
+benchmarking/classic-ML-based/run_scClassify.R	benchmarking/classic-ML-based/run_scClassify.R	1ee215086598da23549e86b20a2395adfbb3d36e358930dbff28a4e066612930	
+benchmarking/classic-ML-based/run_scID.R	benchmarking/classic-ML-based/run_scID.R	fafa501289d222885f6c8027fbdb29e4cda464b1c2035252c79e1410038564e3	
+benchmarking/classic-ML-based/run_scPred.R	benchmarking/classic-ML-based/run_scPred.R	8d8a4474e267fb9f431bd643fd207615cd6d4432b6e5b8f7698042034429d277	
+benchmarking/classic-ML-based/run_scPred_adaboost.R	benchmarking/classic-ML-based/run_scPred_adaboost.R	8189f443a8566168c96c52e736ffdeb4c814fad832e54f1d90764bbcb1b3cc97	
+benchmarking/classic-ML-based/run_scPred_avNNet.R	benchmarking/classic-ML-based/run_scPred_avNNet.R	0ed3e399222f33f9a8733aae976aa04d4d48696409b434c117b95c75ab9fa468	
+benchmarking/classic-ML-based/run_scPred_bayesglm.R	benchmarking/classic-ML-based/run_scPred_bayesglm.R	30ca9a9dfd77ad7a9f0530a5262f0d3d3d2e4addf02ff510ecff4a2de04ebf46	
+benchmarking/classic-ML-based/run_scPred_earth.R	benchmarking/classic-ML-based/run_scPred_earth.R	aa612d79c90ebb6930e333a75312db5ca3f95fab2e6b862fc08ca67fcf845cce	
+benchmarking/classic-ML-based/run_scPred_glm.R	benchmarking/classic-ML-based/run_scPred_glm.R	929169c5539efcf73107400c0c9f98265bc1e0c467a77fdd80ae8c78350f9ea8	
+benchmarking/classic-ML-based/run_scPred_glmboost.R	benchmarking/classic-ML-based/run_scPred_glmboost.R	fb7c7068007437a9b50cd349a067458e80bf77c37fe7f903cca001ccc8fdc397	
+benchmarking/classic-ML-based/run_scPred_knn.R	benchmarking/classic-ML-based/run_scPred_knn.R	0766e1b202935c5dc7c2317f9e8be2d7794cde96da42ea774e9614a65abdfbc8	
+benchmarking/classic-ML-based/run_scPred_lda.R	benchmarking/classic-ML-based/run_scPred_lda.R	ac607524c36bffb196a8245b75ace3917b308563e5a2ef8d4a8e9e7284e52e24	
+benchmarking/classic-ML-based/run_scPred_mlp.R	benchmarking/classic-ML-based/run_scPred_mlp.R	076873679cef83bacf42c883e9d149f098120ba803c9217c785cfc28a617b074	
+benchmarking/classic-ML-based/run_scPred_multinom.R	benchmarking/classic-ML-based/run_scPred_multinom.R	33a506bfd446f8357310458c5c2a6472523f30595c286350eba93702ec0f2b65	
+benchmarking/classic-ML-based/run_scPred_nb.R	benchmarking/classic-ML-based/run_scPred_nb.R	62841b6ddd9edd48e9548d0120fb187cca8dcbbbd3a0d330cec8e4abfcf5169a	
+benchmarking/classic-ML-based/run_scPred_nnet.R	benchmarking/classic-ML-based/run_scPred_nnet.R	79b5ccf515e796be2793d9eb8c5d68a507b78fca05dea54294fd9f51171fe05f	
+benchmarking/classic-ML-based/run_scPred_regLogistic.R	benchmarking/classic-ML-based/run_scPred_regLogistic.R	890263beff3ae1e516901081611e3ce6ea658d83ee9071f51bd70c32af126c5a	
+benchmarking/classic-ML-based/run_scPred_rf.R	benchmarking/classic-ML-based/run_scPred_rf.R	10a46e9e0736654c8ada26e4cbc7f058a1e74ebd92bd1e0880961020c810cd5c	
+benchmarking/classic-ML-based/run_scPred_svmLinear.R	benchmarking/classic-ML-based/run_scPred_svmLinear.R	c0562eb4136dcc2d53c0578099ce7b4c2546bfec0a4cc100fcb65e3f185a64a8	
+benchmarking/classic-ML-based/run_scPred_svmPoly.R	benchmarking/classic-ML-based/run_scPred_svmPoly.R	110e3b04d43a61b37d2cd455198f8a15b1884012b4737064931fbeeeaafeaa6d	
+benchmarking/classic-ML-based/run_scPred_xgbTree.R	benchmarking/classic-ML-based/run_scPred_xgbTree.R	c386f6a983077300eefc3d08d8c90b41594c8ff8275d88f4943d84e616babce6	
+benchmarking/classic-ML-based/run_singleCellNet.R	benchmarking/classic-ML-based/run_singleCellNet.R	3de03d178beb70fe64cae34f21041b8e6359d336b3c2a399f8fe3adb91e19e7c	
+benchmarking/database-based/SCSA.py	benchmarking/database-based/SCSA.py	134b82919590e4b1ee3efd8164f07438478475aa31aab7997c199ad228fa82e3	
+benchmarking/database-based/run_SCINA.R	benchmarking/database-based/run_SCINA.R	8eebb59f1110e7cd06fb5a8fc3b49d37380aaee81c087af48981104aad933a4a	
+benchmarking/database-based/run_SCSA.R	benchmarking/database-based/run_SCSA.R	8f43742ed7673f576a07f6f9cc7524a8ba9f79ad9910e62b07ef08d9e61d9fd7	paths-scrubbed:1
+benchmarking/database-based/run_ScInfeR.R	benchmarking/database-based/run_ScInfeR.R	b59bf8b3da9b5b7e2055155dee36cb48114082c958ddc385713c7f8c1338c5b3	
+benchmarking/database-based/run_clustifyr_hyper.R	benchmarking/database-based/run_clustifyr_hyper.R	d420efedcff2d82f170ed0ee81e473754e3383913f9ecb77e6fee2c35b82de09	
+benchmarking/database-based/run_clustifyr_jaccard.R	benchmarking/database-based/run_clustifyr_jaccard.R	23d2a01f6422cba999492306a2e5248f043678433c99b9f3ee5277eb73179ea2	
+benchmarking/database-based/run_scCATCH.R	benchmarking/database-based/run_scCATCH.R	49e7bf01c54580cb826f02957dccd8dee4ee750671118e3bffd127aa8c16aad3	
+benchmarking/database-based/run_scSorter.R	benchmarking/database-based/run_scSorter.R	e68b449d793c3b9a83464f310a99bf620f45b0a2338708fa0ae85572f3e57416	
+benchmarking/database-based/run_scType.R	benchmarking/database-based/run_scType.R	4e00b22fe6c06f07f265481d8bdafa9ab4e479ea5d87f568acda8c5776623b25	
+benchmarking/marker-based/SCSA.py	benchmarking/marker-based/SCSA.py	134b82919590e4b1ee3efd8164f07438478475aa31aab7997c199ad228fa82e3	
+benchmarking/marker-based/run_SCINA.R	benchmarking/marker-based/run_SCINA.R	0fb3a041b2f77a64f766c037de2221867fba8dfcf49d606539651381c0b11c82	
+benchmarking/marker-based/run_SCSA.R	benchmarking/marker-based/run_SCSA.R	5c6fd5e8702b2d07a917b08790e64383e6536098bbdc217245541e34374f705c	paths-scrubbed:1
+benchmarking/marker-based/run_ScInfeR.R	benchmarking/marker-based/run_ScInfeR.R	1fc289f1d294a0afeac7ea942bcc98f2de2d7e4f6f8afe3d1115101e46895cde	
+benchmarking/marker-based/run_clustifyr_hyper.R	benchmarking/marker-based/run_clustifyr_hyper.R	0b017a82e8883138e3f754e1686a56fc960b48e5c5735f2f46ab27a2d9e017f5	
+benchmarking/marker-based/run_clustifyr_jaccard.R	benchmarking/marker-based/run_clustifyr_jaccard.R	b10f9bd8084b2a3719db2f1d3244433604304865c941f537782987b3f8563a3b	
+benchmarking/marker-based/run_scCATCH.R	benchmarking/marker-based/run_scCATCH.R	01c8d17f6878959a9b5b621931f2f0ff21ee57683723ee859e06e78581b4b621	
+benchmarking/marker-based/run_scSorter.R	benchmarking/marker-based/run_scSorter.R	7227b927a4a68c1424e2c5d5847d6537d9fe0e18de877626fe9c8f98e4ea7753	
+benchmarking/marker-based/run_scType.R	benchmarking/marker-based/run_scType.R	d4aaf6ef4bf2f32d06e7c5b2909070fa1d9764e185090a39002150508c3a008b	
+benchmarking/python-DL-implementation/Install Notes DL.txt	benchmarking/python-DL-implementation/Install Notes DL.txt	c525243a4d325988fde4915b724a73132e6e05e3965930ebbd8a12ce4349a023	paths-scrubbed:1
+benchmarking/python-DL-implementation/benchmarking_helpers.ipynb	benchmarking/python-DL-implementation/benchmarking_helpers.ipynb	da187fe780f6a522ffc1fc528a720f6784c79493c9dec2064a3cdadf2ae2cb3e	
+benchmarking/python-DL-implementation/benchmarking_main.ipynb	benchmarking/python-DL-implementation/benchmarking_main.ipynb	1df68604c3a31c0b4a730a366ae888336a562ab3d1003edb374da79ac8b533ce	outputs-cleared:7
+benchmarking/python-DL-implementation/DL-based/run_ACTINN.py	benchmarking/python-DL-implementation/DL-based/run_ACTINN.py	b22151b40774255679f23669688d5a6019dc0eeaadc2a1d96b3b676228389272	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_C2S.py	benchmarking/python-DL-implementation/DL-based/run_C2S.py	09187bcf7ed566d97379d9d60292b794a91f34520ecaa1d513b120d90a9d679d	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_CIForm.py	benchmarking/python-DL-implementation/DL-based/run_CIForm.py	6923147deacd48778368a43f240b622db09bb9efa13256adbe6fc1d503368389	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_CIForm_helper.py	benchmarking/python-DL-implementation/DL-based/run_CIForm_helper.py	539e38629c251f83ede9b4345d39b1a12f58610543e1919aa267bd57d62c7472	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/run_Cell_BLAST.py	benchmarking/python-DL-implementation/DL-based/run_Cell_BLAST.py	abe140018201b3e8b8e7ced058e8f462b6b5efb8e944693f78793846de840d43	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_MARS.py	benchmarking/python-DL-implementation/DL-based/run_MARS.py	ab26db8e8298e256e412c25f8ef61c1288c026ea3b74712fb01f13ffc05de2f9	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_SCANVI.py	benchmarking/python-DL-implementation/DL-based/run_SCANVI.py	47cce910caff14b3f7ea76bd9eb0884adfd17f9905df85096a4e5de7e992aa00	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_TOSICA.py	benchmarking/python-DL-implementation/DL-based/run_TOSICA.py	78c186d6c19fc987366a02314d2d609a971c86121eb638dd22ffd151ac761ded	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_scArches.py	benchmarking/python-DL-implementation/DL-based/run_scArches.py	88a51f07d01af4d8daebda7df3e84cee6928ccb6d80e7ed77fe4fee2930d6f14	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_scBalance.py	benchmarking/python-DL-implementation/DL-based/run_scBalance.py	bd735bf799cda0b90f062c044d339e9ecfa9bb2f36f6ffd5b7456aa1c2f1c62a	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_scDeepSort.py	benchmarking/python-DL-implementation/DL-based/run_scDeepSort.py	adf0780ff65c010d3f33afc3a746fe841ff1f9a26e22af2336d23890788d6f9b	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_scGAD.py	benchmarking/python-DL-implementation/DL-based/run_scGAD.py	c203ebc614b8fc8cba06974aa2d02783851d6cd00dd00d8fe384018e6b0865a8	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_scHash.py	benchmarking/python-DL-implementation/DL-based/run_scHash.py	cd9bf2f26f52c32af5d886a4142104b40d20f2abe01e3566e69b5f2591ce1503	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_scMMT.py	benchmarking/python-DL-implementation/DL-based/run_scMMT.py	b1bc5565646e6843f83158489cbc898baae06216ca8719a1f509a6bb8f68eca2	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_scSemiCluster.py	benchmarking/python-DL-implementation/DL-based/run_scSemiCluster.py	e95fda07e3330be72ed65ce0728dafe97ecdb173c27eeef1523497fa8270bf99	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/run_scSemiGAN.py	benchmarking/python-DL-implementation/DL-based/run_scSemiGAN.py	a1e803ef4b4efb20c3287608ef11bf01f6b6793800a2ec7f282dc057246508dc	paths-scrubbed:2
+benchmarking/python-DL-implementation/DL-based/MARS_package/__init__.py	benchmarking/python-DL-implementation/DL-based/MARS_package/__init__.py	ae9d768d9fc7e1f2cb625ec89237cba068f445e7428596ba60d8a2615d52f646	
+benchmarking/python-DL-implementation/DL-based/MARS_package/epoch_sampler.py	benchmarking/python-DL-implementation/DL-based/MARS_package/epoch_sampler.py	8b08d67c08c626bcb857b3984c8dfee294e8f773b1383ca239f8c90be69966db	
+benchmarking/python-DL-implementation/DL-based/MARS_package/experiment_dataset.py	benchmarking/python-DL-implementation/DL-based/MARS_package/experiment_dataset.py	89c596887a7c2ec2a8305e6b22858e585e728818d5b1943ce9de2cf6df39484e	
+benchmarking/python-DL-implementation/DL-based/MARS_package/landmarks.py	benchmarking/python-DL-implementation/DL-based/MARS_package/landmarks.py	e14bdcf80040859811f3836a3590b2c93ebeb3b98551d315840c43f41154d9dd	
+benchmarking/python-DL-implementation/DL-based/MARS_package/loss.py	benchmarking/python-DL-implementation/DL-based/MARS_package/loss.py	7443bddefc18c37bb64f3e66038539b9d67c82b0ba98a8a3b5bfd24c988b5741	
+benchmarking/python-DL-implementation/DL-based/MARS_package/mars.py	benchmarking/python-DL-implementation/DL-based/MARS_package/mars.py	7b0d2108ab688909f742339cc9e5dd80bc076b6c85d933520954a743e0da4a33	
+benchmarking/python-DL-implementation/DL-based/MARS_package/metrics.py	benchmarking/python-DL-implementation/DL-based/MARS_package/metrics.py	ed597a431065f728f442c89dc3b2346a889fa3ad1a082a978b36102260a5eb56	
+benchmarking/python-DL-implementation/DL-based/MARS_package/net.py	benchmarking/python-DL-implementation/DL-based/MARS_package/net.py	92ee1a3de4ed683ed76b79cefd83650024a527d0b39f38523cb21a5a7eaea6f8	
+benchmarking/python-DL-implementation/DL-based/MARS_package/utils.py	benchmarking/python-DL-implementation/DL-based/MARS_package/utils.py	7a907beddaf0ef3dbec0adf2c2dde3a08f67ae057b3af71539447bed59fd0a4f	
+benchmarking/python-DL-implementation/DL-based/scGAD_package/__init__.py	benchmarking/python-DL-implementation/DL-based/scGAD_package/__init__.py	1890854def0da9001d35e8ff4a4f00ca7ffa3033533d59d6344940533c4c72fd	
+benchmarking/python-DL-implementation/DL-based/scGAD_package/augmentation.py	benchmarking/python-DL-implementation/DL-based/scGAD_package/augmentation.py	1404cec5b2f3ab60caf6214aec9a1ea07b43310b1bf7f5acd100697832dfd59f	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scGAD_package/layers.py	benchmarking/python-DL-implementation/DL-based/scGAD_package/layers.py	39faba94df65bbc4597cb91ed410e89703376c7bc6f7848b6998d9656d13ac4c	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scGAD_package/preprocess.py	benchmarking/python-DL-implementation/DL-based/scGAD_package/preprocess.py	cd23bee65032501581ee640b78389573b8f844d796cebcc79ee3276077c46e6b	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scGAD_package/train_cross.py	benchmarking/python-DL-implementation/DL-based/scGAD_package/train_cross.py	96690fc075cbd875f2a3a8866ec8e85563e67a0f4093afb011532051d0077e8a	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scGAD_package/train_simu.py	benchmarking/python-DL-implementation/DL-based/scGAD_package/train_simu.py	78f0351360603bd28bcf7af137887e656b225a5774c2b8fd0498486678429d46	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scGAD_package/train_single.py	benchmarking/python-DL-implementation/DL-based/scGAD_package/train_single.py	fb5f2aedbaac7951b506b558a57fbc388afb33137f367cc275b4a46ec1f883b8	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scGAD_package/utils.py	benchmarking/python-DL-implementation/DL-based/scGAD_package/utils.py	87ed11504f55527c89f1fd044a74e732690776c067edc96b7b353c059357359c	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/__init__.py	benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/__init__.py	b3b1b3b97937893322cfd5adcd960f08cd8e879bff9c1d39eea4eb032d411200	
+benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/scSemiCluster_model.py	benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/scSemiCluster_model.py	83779c1048bf3f953a13b87579836cf6af27c7c1a917faed4bb42f5005e93661	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/scSemiCluster_preprocess.py	benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/scSemiCluster_preprocess.py	4860b8dee57ebe52d108d8ca0e4221a228071c238e778e93d6ec2cbfa35649e3	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/scSemiCluster_utils.py	benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/scSemiCluster_utils.py	87ed11504f55527c89f1fd044a74e732690776c067edc96b7b353c059357359c	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/__init__.py	benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/__init__.py	2c8fe87891e5b5edaefc34de515e8f00d8a76538fdfeee7e339a5221743e7ca6	
+benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/clus_wgan.py	benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/clus_wgan.py	2cd165278719e2995e1189c8149424f8e0bf870fae09d23353ac6f68892fcbc6	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/data_Preprocess.py	benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/data_Preprocess.py	f875ef3e983506c73b7c604aae5f804951d89c915153e2e656d9d80136cdad03	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/eval_real.py	benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/eval_real.py	c82192bc41a5a761b7e1a35c7ee3c8effd0d90aeccc7e541db5855942227dec6	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/util.py	benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/util.py	60fbb437ba57ea141b467ee625399b5ccc3f3314207623159fb4dc7b5a37a5b9	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation2/run_CIForm.py	benchmarking/python-DL-implementation2/run_CIForm (2).py	6923147deacd48778368a43f240b622db09bb9efa13256adbe6fc1d503368389	paths-scrubbed:2;renamed-from:run_CIForm (2).py
+benchmarking/python-DL-implementation2/run_CIForm_helper.py	benchmarking/python-DL-implementation2/run_CIForm_helper (2).py	539e38629c251f83ede9b4345d39b1a12f58610543e1919aa267bd57d62c7472	not-redistributed:no-upstream-licence
+benchmarking/python-DL-implementation2/run_Cell_BLAST.py	benchmarking/python-DL-implementation2/run_Cell_BLAST (2).py	abe140018201b3e8b8e7ced058e8f462b6b5efb8e944693f78793846de840d43	paths-scrubbed:2;renamed-from:run_Cell_BLAST (2).py
+benchmarking/python-DL-implementation2/run_MARS.py	benchmarking/python-DL-implementation2/run_MARS (2).py	ab26db8e8298e256e412c25f8ef61c1288c026ea3b74712fb01f13ffc05de2f9	paths-scrubbed:2;renamed-from:run_MARS (2).py
+benchmarking/python-DL-implementation2/run_SCANVI.py	benchmarking/python-DL-implementation2/run_SCANVI (2).py	47cce910caff14b3f7ea76bd9eb0884adfd17f9905df85096a4e5de7e992aa00	paths-scrubbed:2;renamed-from:run_SCANVI (2).py
+benchmarking/python-DL-implementation2/run_TOSICA.py	benchmarking/python-DL-implementation2/run_TOSICA (3).py	78c186d6c19fc987366a02314d2d609a971c86121eb638dd22ffd151ac761ded	paths-scrubbed:2;renamed-from:run_TOSICA (3).py
+benchmarking/python-DL-implementation2/run_scBalance.py	benchmarking/python-DL-implementation2/run_scBalance (2).py	bd735bf799cda0b90f062c044d339e9ecfa9bb2f36f6ffd5b7456aa1c2f1c62a	paths-scrubbed:2;renamed-from:run_scBalance (2).py
+benchmarking/python-DL-implementation2/run_scHash.py	benchmarking/python-DL-implementation2/run_scHash (2).py	cd9bf2f26f52c32af5d886a4142104b40d20f2abe01e3566e69b5f2591ce1503	paths-scrubbed:2;renamed-from:run_scHash (2).py
+benchmarking/python-DL-implementation2/run_scMMT.py	benchmarking/python-DL-implementation2/run_scMMT (2).py	b1bc5565646e6843f83158489cbc898baae06216ca8719a1f509a6bb8f68eca2	paths-scrubbed:2;renamed-from:run_scMMT (2).py
+benchmarking/python-DL-implementation2/run_scSemiCluster.py	benchmarking/python-DL-implementation2/run_scSemiCluster.py	e95fda07e3330be72ed65ce0728dafe97ecdb173c27eeef1523497fa8270bf99	paths-scrubbed:2
+benchmarking/reference-based/run_CIPR.R	benchmarking/reference-based/run_CIPR.R	d7766db7ac5c81b83442c3187eb65976457cb568cd5709c8bd6d2fc6c8b1a463	
+benchmarking/reference-based/run_Seurat_Transfer_CCA.R	benchmarking/reference-based/run_Seurat_Transfer_CCA.R	10d77d8089fcd60afe53db0838d8e78f1161a0b49e2e3acca42e86947096f0cd	
+benchmarking/reference-based/run_Seurat_Transfer_PCA.R	benchmarking/reference-based/run_Seurat_Transfer_PCA.R	72764e53aff0622a33ccc0dcc47bdd9e03ba5c77e243112ea6a0a4de8ccf650e	
+benchmarking/reference-based/run_Seurat_Transfer_RPCA.R	benchmarking/reference-based/run_Seurat_Transfer_RPCA.R	6d797a99167fc322f6ac02fb39bfd8e4f608611dccebf9150e424907b18c7272	
+benchmarking/reference-based/run_SingleR.R	benchmarking/reference-based/run_SingleR.R	5cfd0a77121f6ae8b479527ff3e3a2d5c3bbb47f79de0bf326bcf9157d17e0ff	
+benchmarking/reference-based/run_scibetR.R	benchmarking/reference-based/run_scibetR.R	11bdb9aeaeedff08005db681f250b3bd3b0db15d93b5afa1050915696fbbe7fb	
+benchmarking/reference-based/run_scmap_cell.R	benchmarking/reference-based/run_scmap_cell.R	7bcbdcc1f02c623d59174dd1333c0e33ed479d44845f583f60ca63f8935d3f72	
+benchmarking/reference-based/run_scmap_cluster.R	benchmarking/reference-based/run_scmap_cluster.R	3cdc64e82813434c33d1af09c4b492c174cce194fdd4e915f3002787a4ed4f9b	
+foundation-models/C2S_FT.ipynb	benchmarking/colab/C2S_FT.ipynb	a39bd01da74d250ab08ac828118829ff987a5fa965c20deab96c564edd9315f6	outputs-cleared:42;colab-metadata-cleared:21
+foundation-models/geneformer_pretrained.ipynb	benchmarking/colab/geneformer_pretrained.ipynb	207b630a93e9fb6f1c1ee1b99f731bbd65ec6f73d7f8a8d6ba8b9be20860d515	outputs-cleared:18;colab-metadata-cleared:20
+foundation-models/scBERT_pretrained.ipynb	benchmarking/colab/scBERT_pretrained.ipynb	6a7a7d9d98a9e11692ace442e8318cfb0354ce51df9a2b5f6dd12fa466a10fb2	outputs-cleared:9;colab-metadata-cleared:26
+foundation-models/scFoundation_pretrained.ipynb	benchmarking/colab/scFoundation_pretrained.ipynb	3215d945cf5b9a95e67b86bc8d6fafd7a3a41ee49402b25905c2ff54c05c3668	outputs-cleared:6;colab-metadata-cleared:19
+foundation-models/scGPT_pretrained.ipynb	benchmarking/colab/scGPT_pretrained.ipynb	551dbbae7dab81918cd46412017a84f2195d92ec06600209d3d582ffd389f385	outputs-cleared:6;colab-metadata-cleared:19
+preprocessing/synthetic-L9/L9 Generator.R	Data Creation/P4 L9 Synthetic V1/L9 Generator.R	f7a29a66f0db13be83660f500e2deb7dbcf36ef439538d35c567eb0b75c3ea5e	
+preprocessing/synthetic-L9/L9 Sanity Check.R	Data Creation/P4 L9 Synthetic V1/L9 Sanity Check.R	beabfafe5b958d6e71fc83ef3922183b958f1b15f935a600900c0dd603f6cf9f	
+preprocessing/synthetic-L9/Profiler.ipynb	Data Creation/P4 L9 Synthetic V1/Profiler.ipynb	c4e82be0136cdeb63d75e646f1a15aba0e4bc935432adf5fd81100d5273ebd3b	outputs-cleared:55
+preprocessing/synthetic-L9/load_to_anndata.ipynb	Data Creation/P4 L9 Synthetic V1/load_to_anndata.ipynb	c5b4f069d11bcad933ca404b62d4a7dadbf21b3125845d124ce83294426ee8bb	outputs-cleared:94
+preprocessing/synthetic-L9/load_to_seurat.R	Data Creation/P4 L9 Synthetic V1/load_to_seurat.R	d70133ab2ecc8423ea8b41c7cedae5fb102348c6ee71cc2a6473f835c6e3760c	
+preprocessing/synthetic-L9/sanity_check_report.txt	Data Creation/P4 L9 Synthetic V1/sanity_check_report.txt	a49a5d3c87f10ce48e27d52dc6604fd0ed9799a3ddbc0449ced1a509859dc18c	
+preprocessing/synthetic-L9/l9_benchmark_sets/L9_DESIGN_SUMMARY.txt	Data Creation/P4 L9 Synthetic V1/l9_benchmark_sets/L9_DESIGN_SUMMARY.txt	ae8ee02e0d0f85d0db7f77c77e7f8ae22935454a790819d7b196ab68c0047cfc	
+preprocessing/real-datasets/Dataset_Profiling_and_Mapping.ipynb	Data Creation/P5 Real Life Sets V2/Dataset_Profiling_and_Mapping.ipynb	c5a87af7b1cba9510b2e3a459dffb3c5387dcb4266a763fd29fd30780ecbdb00	outputs-cleared:22
+preprocessing/real-datasets/load_anndata_P5.ipynb	Data Creation/P5 Real Life Sets V2/load_anndata_P5.ipynb	b045225d86fa05bd3a62d9f6e4a1623a83b1e3c6093da9568a92bd2c2ea16764	outputs-cleared:10
+preprocessing/real-datasets/load_seurat_P5.R	Data Creation/P5 Real Life Sets V2/load_seurat_P5.R	3ef87c54f56c5f32842f74b1866aa1ae1540f5b4073f47e6ee84e71c1a7d94d4	
+preprocessing/real-datasets/Bach-Mammary-2017/Bach-Mammary-2017_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Bach-Mammary-2017/Bach-Mammary-2017_Preprocessing.R	30b2d75e90a49db3f51137dfb0eb69c497d885c1ad00ec0781392737f3664d32	
+preprocessing/real-datasets/Bacher-TCell-2020/Bacher-TCell-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Bacher-TCell-2020/Bacher-TCell-2020_Preprocessing.R	cfcea621e4250a5841c7c2dd8632794d2d0fd5d15f4dd1e64480af8700b531c8	
+preprocessing/real-datasets/Baron-Pancreas-5cl-2016/Baron-Pancreas-5cl-2016_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Baron-Pancreas-5cl-2016/Baron-Pancreas-5cl-2016_Preprocessing.R	33e56c8c61878ec092a4548d8ba806afd44cf150755c4a2337249ee55a594f2a	
+preprocessing/real-datasets/Campbell-Brain-2017/Campbell-Brain-2017_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Campbell-Brain-2017/Campbell-Brain-2017_Preprocessing.R	fdd3d98f5c1426ebd08cbb47144cc8d77b4a93ae434496ced430bfed92814f11	
+preprocessing/real-datasets/Chen-Brain-2017/Chen-Brain-2017_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Chen-Brain-2017/Chen-Brain-2017_Preprocessing.R	530c7973eb932f61dc7768ffb36a04faeda4b8f1bf5d988ca6237a816af019ed	
+preprocessing/real-datasets/Darmanis-Brain-2015/Darmanis-Brain-2015_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Darmanis-Brain-2015/Darmanis-Brain-2015_Preprocessing.R	00c357d342cb480d84ed1ee62244e302998ca54171e2eb36f7923bfe7fa80654	
+preprocessing/real-datasets/Grun-Pancreas-2016/Grun-Pancreas-2016_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Grun-Pancreas-2016/Grun-Pancreas-2016_Preprocessing.R	89b10f43cc0d95f69c2147af12215bf761600968350b83b31372973778678e38	
+preprocessing/real-datasets/He-Bladder-2020/He-Bladder-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/He-Bladder-2020/He-Bladder-2020_Preprocessing.R	5788d47db5b900490a34181f915c30b51f20f9b2fb79110126fab6b7550da7d3	
+preprocessing/real-datasets/He-Blood-2020/He-Blood-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/He-Blood-2020/He-Blood-2020_Preprocessing.R	b7ea4e37c46e73f8e4060656afc322abb7012bae9c7fd62fec659e119bfdbe67	
+preprocessing/real-datasets/He-Liver-2020/He-Liver-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/He-Liver-2020/He-Liver-2020_Preprocessing.R	9feffefa3f95b58af997385d05e1a66e6b427bb37111e4ac144ffe3b3d8c74c8	
+preprocessing/real-datasets/He-Muscle-2020/He-Muscle-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/He-Muscle-2020/He-Muscle-2020_Preprocessing.R	eaa4f26f116bdd7154d9cc6cd2206f8a1428ed56e97e4dc973d3ca372fef7be0	
+preprocessing/real-datasets/He-Skin-2020/He-Skin-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/He-Skin-2020/He-Skin-2020_Preprocessing.R	88d43eab1898bd8d1d4db9e5c7e49801a051f48a26f8cfb7ba10e4800aa9ee08	
+preprocessing/real-datasets/He-Spleen-2020/He-Spleen-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/He-Spleen-2020/He-Spleen-2020_Preprocessing.R	e50f9b361b39e7747bce12c331c6e10e2893dbcac927092a26d3007ffe4c267c	
+preprocessing/real-datasets/He-Stomach-2020/He-Stomach-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/He-Stomach-2020/He-Stomach-2020_Preprocessing.R	3b7849308fdacd802fd9207c5497c91a555f00acea0a05d7a425393d45afd0e0	
+preprocessing/real-datasets/Kotliarov-PBMC-2020/Kotliarnov-PBMC-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Kotliarov-PBMC-2020/Kotliarnov-PBMC-2020_Preprocessing.R	b9df0037b9e7b97d4dd133f11a146b52a1d9c227b052f9451d6d5d781b2520b5	
+preprocessing/real-datasets/Kotliarov-PBMC-2020/for_use/Anndata_Preprocess.ipynb	Data Creation/P5 Real Life Sets V2/Kotliarov-PBMC-2020/for_use/Anndata_Preprocess.ipynb	7e706acd811d498a0260a763acd6b91d1e7289277f0fd9244c6d7077ea2db075	outputs-cleared:5
+preprocessing/real-datasets/Lawlor-Pancreas-2017/Lawlor-Pancreas-2017_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Lawlor-Pancreas-2017/Lawlor-Pancreas-2017_Preprocessing.R	a9a243b4f6e4cf4886654991fcf69eb14550ae2b2b702326094bf01317605bc1	
+preprocessing/real-datasets/Liu-2024/Liu-2024_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Liu-2024/Liu-2024_Preprocessing.R	134bf97b0b9eabaa420396a3182e8d07e5543d4389b605649f136e2726004dcd	
+preprocessing/real-datasets/MacParland-Liver-Broad-2018/MacParland-Liver-Broad-2018_Preprocessing.R	Data Creation/P5 Real Life Sets V2/MacParland-Liver-Broad-2018/MacParland-Liver-Broad-2018_Preprocessing.R	cf683cafadea166559b31e4bd6c6f65088140da10736b71a79d14502cae2c1f1	
+preprocessing/real-datasets/MacParland-Liver-Norm-2018/MacParland-Liver-Norm-2018_Preprocessing.R	Data Creation/P5 Real Life Sets V2/MacParland-Liver-Norm-2018/MacParland-Liver-Norm-2018_Preprocessing.R	d1f74d8d1418125b9fef7a7218f3e9de99fc332f60991a32d65ea3a5eda3c81f	
+preprocessing/real-datasets/Macosko-Retina-2015-15k/Macosko-Retina-2015-15k_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Macosko-Retina-2015-15k/Macosko-Retina-2015-15k_Preprocessing.R	fa69394d1d58b04380a39cd16d7d03107806615d4a7e7c3f8c5b7d6f6578f1f5	
+preprocessing/real-datasets/Macosko-Retina-2015-3k/Macosko-Retina-2015-3k_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Macosko-Retina-2015-3k/Macosko-Retina-2015-3k_Preprocessing.R	b425b303b9e2236c72d878e228398f827f56ae73ea9e1bfd218cf4353a86097c	
+preprocessing/real-datasets/Marques-Brain-2016/Marques-Brain-2016_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Marques-Brain-2016/Marques-Brain-2016_Preprocessing.R	d82613c65ee0d3a77cde4693f32655586ec7389dcf30fc281b6e49469fd9a15d	
+preprocessing/real-datasets/Muraro-Pancreas-2016/Muraro-Pancreas-2016_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Muraro-Pancreas-2016/Muraro-Pancreas-2016_Preprocessing.R	56bf6a4ecc367a700d2dcb9f568d6d707849f51e174403a86ea19fc46e1c7b39	
+preprocessing/real-datasets/Nowakowski-Cortex-2017/Nowakowski-Cortex-2017_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Nowakowski-Cortex-2017/Nowakowski-Cortex-2017_Preprocessing.R	b8e70c706cda9fd329e3beafec1e96859f2cf9398e7401cf12ec8d1eb15ac9de	
+preprocessing/real-datasets/PBMC3k/PBMC3k_Preprocessing.R	Data Creation/P5 Real Life Sets V2/PBMC3k/PBMC3k_Preprocessing.R	3498e66a8521179e68223abe8a77d3812c77e4594d04adeaab5831a7d6d48dde	
+preprocessing/real-datasets/PBMCBench/PBMCBench_Preprocessing.R	Data Creation/P5 Real Life Sets V2/PBMCBench/PBMCBench_Preprocessing.R	8bf48e4c328480657fab291f60914e8ca9febb53e80672799b80be6323e94322	
+preprocessing/real-datasets/Petropoulos-2016/Petropoulos_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Petropoulos-2016/Petropoulos_Preprocessing.R	21ba5bc71c3e612665d2a85924f71c8c3f232b16ea91dcbcde3f722ff1093e98	
+preprocessing/real-datasets/Segerstolpe-Pancreas-2016/Segerstolpe-Pancreas-2016_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Segerstolpe-Pancreas-2016/Segerstolpe-Pancreas-2016_Preprocessing.R	7d7d5b15208d3930c1cc666a28046ba9f329f16cbd7d9f4b70541d5b7976d5fd	
+preprocessing/real-datasets/Shekhar-Retina-2016/Shekhar-Retina-2016_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Shekhar-Retina-2016/Shekhar-Retina-2016_Preprocessing.R	43e908b90ad70574414a0fe86fedde97ef42c8fe12b3549ff5e10e79e1695016	
+preprocessing/real-datasets/Tabula Muris-FACS-15k/TabulaMuris-FACS-15k_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Tabula Muris-FACS-15k/TabulaMuris-FACS-15k_Preprocessing.R	0dc3b769b4b3a6304de8f1408fe0f0a1a32c71d857a1aa732f4377c2c596a68a	
+preprocessing/real-datasets/Tabula Muris-FACS-15k/TabulaMuris_facs_Preprocess_CellSubset.ipynb	Data Creation/P5 Real Life Sets V2/Tabula Muris-FACS-15k/TabulaMuris_facs_Preprocess_CellSubset.ipynb	cfb970c4e32a6fd8a1f239b98e3c4e92993aa57bf54532de993fffe227814018	outputs-cleared:2
+preprocessing/real-datasets/Tabula Muris-FACS-3k/TabulaMuris-FACS-3k_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Tabula Muris-FACS-3k/TabulaMuris-FACS-3k_Preprocessing.R	540cc4a876104c650e54c57bc316e22559dd4d270876db82c7c2a49b3caf35ce	
+preprocessing/real-datasets/Tabula Muris-FACS-3k/TabulaMuris_facs_Preprocess_CellSubset.ipynb	Data Creation/P5 Real Life Sets V2/Tabula Muris-FACS-3k/TabulaMuris_facs_Preprocess_CellSubset.ipynb	d80afefd40f69e1071563583c82cde80ae3af22edfb9104a1d2ef2c0e07f9a49	outputs-cleared:2
+preprocessing/real-datasets/Tasic-Brain-Broad-2016/Tasic-Brain-2016-Broad_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Tasic-Brain-Broad-2016/Tasic-Brain-2016-Broad_Preprocessing.R	dde4753d682c030a55e49375c61cee36b3d8fd3033aeacedd1e8e7ca6ff2c383	
+preprocessing/real-datasets/Tasic-Brain-Norm-2016/Tasic-Brain-Norm-2016_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Tasic-Brain-Norm-2016/Tasic-Brain-Norm-2016_Preprocessing.R	a7edc5a0b91b015f8d9689177fef549fb853dc66974fbb4afcce99f39f10167a	
+preprocessing/real-datasets/Tasic-Brain-Norm-2016/Tasic_Brain_SeuratMake.R	Data Creation/P5 Real Life Sets V2/Tasic-Brain-Norm-2016/Tasic_Brain_SeuratMake.R	a0a0f88873f4c527d2c85b5ac9a3b85e80bbabc4cf497fdcd2b86fe7544f9a07	
+preprocessing/real-datasets/Tian-Cellbench-10x-5cl-2019/Cellbench-10x-5cl-2019_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Tian-Cellbench-10x-5cl-2019/Cellbench-10x-5cl-2019_Preprocessing.R	520e864b02f892db4007c5d789079c2153f59a6dbe4af899bbc03c77b168a80e	
+preprocessing/real-datasets/Xin-Pancreas-2016/Xin-Pancreas-2016_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Xin-Pancreas-2016/Xin-Pancreas-2016_Preprocessing.R	6fb2d40858f22d59ccd48c429ac9a64e346196bd4fe891bed0cd9ba552f09b47	
+preprocessing/real-datasets/Zeisel-Brain-lvl1-2015/Zeisel-Brain-lvl1-2015_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Zeisel-Brain-lvl1-2015/Zeisel-Brain-lvl1-2015_Preprocessing.R	d3096d54624a9badd04c7c270dde266091050f2eac7cf6c201ac3f51cddfdc4f	
+preprocessing/real-datasets/Zeisel-Brain-lvl2-2015/Zeisel-Brain-lvl2-2015_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Zeisel-Brain-lvl2-2015/Zeisel-Brain-lvl2-2015_Preprocessing.R	588575aebebd3f6565f4b92525eb68aa9762106b16c2a05dee78370b30683c27	
+preprocessing/real-datasets/Zeisel-Nervous-2018/Zeisel-Nervous-2018_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Zeisel-Nervous-2018/Zeisel-Nervous-2018_Preprocessing.R	c5ddcdec729868c3f796599b022a99a0d2cfb1b9e117ace60cd0f9219fa4272f	
+preprocessing/real-datasets/Zhao-Immune-Broad-2020/Zhao-Immune-Broad-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Zhao-Immune-Broad-2020/Zhao-Immune-Broad-2020_Preprocessing.R	1f88e7587bd0efb9af9af5a66c9a9abbc924ec22a1c3ee77ec4090962e181173	
+preprocessing/real-datasets/Zhao-Immune-Fine-2020/Zhao-Immune-Fine-2020_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Zhao-Immune-Fine-2020/Zhao-Immune-Fine-2020_Preprocessing.R	bca5ae5f158c998b46e76d77a85a79c11610ed385eb86ef000905c19fc966c1e	
+preprocessing/real-datasets/Zheng-Zheng68k/Sourcing_Zheng68k.ipynb	Data Creation/P5 Real Life Sets V2/Zheng-Zheng68k/Sourcing_Zheng68k.ipynb	b8b73cc745fd69e7d972ed4004e8309ef568941817ecd4e8d9108daad26d616d	outputs-cleared:2
+preprocessing/real-datasets/Zheng-Zheng68k/Zheng68k_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Zheng-Zheng68k/Zheng68k_Preprocessing.R	4345aeb869f4b9f95603e1488ae884040107bc4501426fada1a8c32e502fffc3	
+preprocessing/real-datasets/Zheng-ZhengSort-5cl-2017/ZhengSort_Preprocess.R	Data Creation/P5 Real Life Sets V2/Zheng-ZhengSort-5cl-2017/ZhengSort_Preprocess.R	45ef813fc092e29ca438493d977e0560138773795a5e73d6a01959f982b9126b	
+preprocessing/real-datasets/Zheng-ZhengSort-TCell-5cl/ZhengSort_Preprocess.R	Data Creation/P5 Real Life Sets V2/Zheng-ZhengSort-TCell-5cl/ZhengSort_Preprocess.R	47095bc9cbd729d791393f58a78be3b92bd19e788c7ffc402f18bcee2bd8c631	
+preprocessing/real-datasets/Zilionis-Lung-2019/Zilionis-Lung-2019_Preprocessing.R	Data Creation/P5 Real Life Sets V2/Zilionis-Lung-2019/Zilionis-Lung-2019_Preprocessing.R	6bf2b3103e40c981446156d37bfd7f1b16e829c90b1c00651a0aaff799111a7d	
+preprocessing/cross-platform/Phase3_Profiling.ipynb	Data Creation/P9 Cross Datasets/Phase3_Profiling.ipynb	94e905d20e7d4f861251c8745e1a6d66e73aef56b8f2ac3e2226dd5decef913a	outputs-cleared:1
+preprocessing/cross-platform/load_anndata_P9.ipynb	Data Creation/P9 Cross Datasets/load_anndata_P9.ipynb	09d1227755972f625c50d92aa7678b9c1b61547c0da60e98b901189abed26432	outputs-cleared:22
+preprocessing/cross-platform/load_seurat_P9.R	Data Creation/P9 Cross Datasets/load_seurat_P9.R	4d9c0306b2dfa57617eb476fff11e47d9ffe2b43ef7822e327b07f57b6f5bf42	
+preprocessing/cross-platform/phase3_figstyle.py	Data Creation/P9 Cross Datasets/phase3_figstyle.py	1b903f28d9592f662d8c5663800c86491c3303dcfa14e0bd0e47a0a54c26dfff	
+preprocessing/cross-platform/regen_phase3_gene_overlap.py	Data Creation/P9 Cross Datasets/regen_phase3_gene_overlap.py	368ac1a639671c6712d775517992f96db38398c3f1f9f0aaa1cffd44a9b6d017	
+preprocessing/cross-platform/regen_phase3_overview.py	Data Creation/P9 Cross Datasets/regen_phase3_overview.py	421b6db605989fec1bcb93a8d21d5db486c46a976c91f51239a419e70896bea4	
+preprocessing/cross-platform/Baron-Pancreas/Baron-Pancreas-Filtered-2016_Preprocessing.R	Data Creation/P9 Cross Datasets/Baron-Pancreas/Baron-Pancreas-Filtered-2016_Preprocessing.R	a6fb587bc24f52c393f6ffa0cd8e8c5eb1dcc88da8701af5a87112c2140fd69b	
+preprocessing/cross-platform/Cellbench 10xv2/Cellbench-10X_Preprocessing.R	Data Creation/P9 Cross Datasets/Cellbench 10xv2/Cellbench-10X_Preprocessing.R	d3d6eafd459aa1dd641c5feec1f73f902318e69741e2d4c0c50e1877903657eb	
+preprocessing/cross-platform/Cellbench Cel-Seq2/Cellbench-CelSeq2_Preprocessing.R	Data Creation/P9 Cross Datasets/Cellbench Cel-Seq2/Cellbench-CelSeq2_Preprocessing.R	d5a230c4fb37fbd1f8683efca4339a976dc54611af79b0fe842c36620f2d57b8	
+preprocessing/cross-platform/Cellbench Drop-seq/Cellbench Drop-seq_Preprocessing.R	Data Creation/P9 Cross Datasets/Cellbench Drop-seq/Cellbench Drop-seq_Preprocessing.R	8f3198c9c1cbf51c120e464f2ab429f03f4e85a96e59032b1e56400e0bb7cebc	
+preprocessing/cross-platform/PBMCBench 10xv2-6cl/PBMCBench-10xv2-6cl_Preprocessing.R	Data Creation/P9 Cross Datasets/PBMCBench 10xv2-6cl/PBMCBench-10xv2-6cl_Preprocessing.R	d8f371649beeb33124c83ee4818ffc57bdcfd3b78b5732135b57587d1e5f750b	
+preprocessing/cross-platform/PBMCBench 10xv2-8cl/PBMCBench 10xv2-8cl_Preprocessing.R	Data Creation/P9 Cross Datasets/PBMCBench 10xv2-8cl/PBMCBench 10xv2-8cl_Preprocessing.R	0905df7bf70b7084845c5dfade04bdb0ba9ee67a5bdc139713b9143415881dff	
+preprocessing/cross-platform/PBMCBench Drop-seq-8cl/PBMCBench Drop-seq-8cl_Preprocessing.R	Data Creation/P9 Cross Datasets/PBMCBench Drop-seq-8cl/PBMCBench Drop-seq-8cl_Preprocessing.R	a6c775f9dc4421f662c1cdf2e64fc76f82d35752263d43451fb3943fcaca3c93	
+preprocessing/cross-platform/PBMCBench InDrops-8cl/PBMCBench InDrops-8cl_Preprocessing.R	Data Creation/P9 Cross Datasets/PBMCBench InDrops-8cl/PBMCBench InDrops-8cl_Preprocessing.R	54646af73d28c15313d30db59947e50d6123aa095cd14b9ac3066d5476f45c7d	
+preprocessing/cross-platform/PBMCBench Seq-well-6cl/PBMCBench Seq-well-6cl_Preprocessing.R	Data Creation/P9 Cross Datasets/PBMCBench Seq-well-6cl/PBMCBench Seq-well-6cl_Preprocessing.R	b4b5143859f0f844a930c314663b9e553763b47eccc4854a6b3fb71cacdaa2df	
+preprocessing/cross-platform/Segerstolpe-Pancreas-2016/Segerstolpe-Pancreas-2016_Preprocessing.R	Data Creation/P9 Cross Datasets/Segerstolpe-Pancreas-2016/Segerstolpe-Pancreas-2016_Preprocessing.R	a4c464fd5311b075e396ff7a27747ad76754554fcd41d23729685f6969f195d0	
+scoring/database-markers/score_cells.py	results/P7a Marker - Real Database/score_cells.py	042301ce56b86b4dbf630592409a7c842e0ab3c8a26d0a3ba71a5705b2e0a798	paths-scrubbed:2
+scoring/llm/score_cells.py	results/P7b LLM - Real Internet/score_cells.py	ea76496aeeb22beaa3510f988fa8e859b92fac6c881079efbf4056ee7d03ba0a	paths-scrubbed:2
+supplementary/make_S14_annotation_maps.R	results/_SI_generated/make_S14_annotation_maps.R	eb635d74c8e5a7881dd11b7c1471c5f3c1b82a4d11aa009fa6f11646f3333d3a	paths-scrubbed:1
+benchmarking/python-DL-implementation/DL-based/MARS_package/LICENSE.md	github.com/snap-stanford/mars@f6f03ba2c1f42221e337e934dad52a1d085b917c/LICENSE.md	1f498e2b2cd239938d2d844d6488f3459a536d6e8a5051647f83fd099f2eabc5	added:upstream-licence

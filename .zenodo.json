@@ -1,0 +1,27 @@
+{
+  "title": "scRNA-Annotation-Benchmarking-Runbook: code for \"Reference dataset structure outweighs method choice in single-cell cell-type annotation\"",
+  "upload_type": "software",
+  "description": "<p>Code for a benchmark of 63 single-cell RNA-seq cell-type annotation tool configurations under a Taguchi L9(3<sup>4</sup>) factorial simulation, a matched real-data panel, cross-platform transfer, database- and LLM-driven annotation, and fine-tuned foundation models.</p><p><b>harness/</b>: reference benchmarking harness (R and Python). <b>as-run/</b>: the code exactly as executed. <b>reproduce/</b>: scripts that regenerate every published figure and statistic from the companion data deposit. The processed input objects and all per-run results are deposited separately on Zenodo.</p>",
+  "creators": [
+    {
+      "name": "Wardhana, Oliver",
+      "affiliation": "Department of Biological Sciences, University of Notre Dame"
+    }
+  ],
+  "license": "mit",
+  "keywords": [
+    "single-cell RNA-seq",
+    "cell-type annotation",
+    "benchmarking",
+    "foundation models",
+    "large language models"
+  ],
+  "version": "1.0.1",
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.23695089",
+      "relation": "references",
+      "resource_type": "dataset"
+    }
+  ]
+}

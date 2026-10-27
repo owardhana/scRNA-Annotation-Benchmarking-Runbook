@@ -1,0 +1,13 @@
+--- aimeeyaoyao/scGAD@3328eda/code/train_single.py
++++ as-run/benchmarking/python-DL-implementation/DL-based/scGAD_package/train_single.py
+@@ -322 +322 @@
+-        count_X = X.astype(np.int)
++        count_X = X.astype(int)
+@@ -340 +340 @@
+-            high_variable = np.array(adata.var.highly_variable.index, dtype=np.int)
++            high_variable = np.array(adata.var.highly_variable.index, dtype=int)
+@@ -343,2 +343,2 @@
+-            select_genes = np.array(adata.var.index, dtype=np.int)
+-            select_cells = np.array(adata.obs.index, dtype=np.int)
++            select_genes = np.array(adata.var.index, dtype=int)
++            select_cells = np.array(adata.obs.index, dtype=int)

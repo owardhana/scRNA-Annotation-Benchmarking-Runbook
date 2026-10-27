@@ -1,0 +1,47 @@
+study,phase,scenario,source,source_ref,accession,split_seed,celltype_column,gene_id_convention,notes
+Darmanis-Brain-2015,2,S1,scRNAseq,darmanis-brain-2015@2023-12-21,GEO GSE67835,123,cell.type,symbol,Reported panel. Human cortex.
+Marques-Brain-2016,2,S2,scRNAseq,marques-brain-2016@2023-12-19,GEO GSE75330,123,inferred.cell.type,mouse-uppercase,Reported panel. toupper() on gene symbols; Rik-suffixed genes removed.
+Nowakowski-Cortex-2017,2,S3,scRNAseq,nowakowski-cortex-2017@2023-12-22,dbGaP phs000989; processed matrix via scRNAseq (UCSC Cell Browser cortex-dev),124,WGCNAcluster,symbol,Reported panel. Human developing cortex; 47 labelled WGCNA clusters (cells with an empty label are dropped before splitting).
+Grun-Pancreas-2016,2,S4,scRNAseq,grun-pancreas-2016@2023-12-14,GEO GSE81076,123,sample,symbol,"Reported panel. Force-assigned to S4: no candidate matched the L9-4 profile. The label column is the ExperimentHub `sample` field (FACS sort gate / library), not an author cell-type annotation. Gene names split on '__' then duplicates collapsed with rowsum(). Benchmarked as the original (not downsampled) object."
+Tabula Muris-FACS-3k,2,S5,csv,metadata.csv + FACS count matrices,GEO GSE132042; figshare 10.6084/m9.figshare.8273102 (tabula-muris-senis-facs-official-raw-obj.h5ad),123,cell_ontology_class,mouse-uppercase,Reported panel. Tabula Muris Senis FACS (all ages). target_n hardcoded to 3000 to reach the medium-cell-count tier.
+He-Skin-2020,2,S6,scRNAseq,he-organs-2020@2023-12-21/skin,GEO GSE159929,123,Cell_type_in_merged_data,symbol,Reported panel. Subset of the He multi-organ atlas.
+Zhao-Immune-Fine-2020,2,S7,scRNAseq,zhao-immune-2020@2023-12-22,GEO GSE125188,123,fine,ensembl-to-hgnc,Reported panel. AnnotationHub EnsDb GRCh38 mapIds(GENEID -> SYMBOL).
+Zheng-ZhengSort-5cl-2017,2,S8,csv,Filtered_DownSampled_SortedPBMC_data.csv + Labels.csv,SRA SRP073767; files from Zenodo 10.5281/zenodo.3357167 (Abdelaal et al. 2019 benchmark bundle),123,Ground_Truth_Celltype,symbol,"Reported panel. FACS-sorted PBMC. Benchmarked as the original object: 20,000 cells, 10 sorted populations (the 5-population for_use subset was not used)."
+MacParland-Liver-Broad-2018,2,S9,tsv,exprMatrix.tsv.gz + meta.tsv,GEO GSE115469 (UCSC Cell Browser export),123,BroadCellType,symbol,Reported panel. Broad label granularity. Benchmarked as the original object.
+Bach-Mammary-2017,candidate,,scRNAseq,bach-mammary-2017@2023-12-14,,,Condition,symbol,Screened candidate; not selected.
+Bacher-TCell-2020,candidate,,scRNAseq,bacher-tcell-2020@2023-12-21,,,new_cluster_names,symbol,Screened candidate; not selected.
+Baron-Pancreas-5cl-2016,"2,3",,scRNAseq,baron-pancreas-2016@2023-12-14/human,GEO GSE84133,,label,symbol,Also the inDrop arm of the Phase 3 Pancreas block.
+Campbell-Brain-2017,candidate,,scRNAseq,campbell-brain-2017@2023-12-14,,,clust_all,symbol,Screened candidate; not selected.
+Chen-Brain-2017,candidate,,scRNAseq,chen-brain-2017@2023-12-14,,,SVM_clusterID,symbol,Screened candidate; not selected.
+He-Bladder-2020,candidate,,scRNAseq,he-organs-2020@2023-12-21/bladder,,,Cell_type_in_merged_data,symbol,Screened candidate; not selected.
+He-Blood-2020,candidate,,scRNAseq,he-organs-2020@2023-12-21/blood,,,reclustered.fine,symbol,Screened candidate; not selected.
+He-Liver-2020,candidate,,scRNAseq,he-organs-2020@2023-12-21/liver,,,reclustered.fine,symbol,Screened candidate; not selected.
+He-Muscle-2020,candidate,,scRNAseq,he-organs-2020@2023-12-21/muscle,,,reclustered.broad,symbol,Screened candidate; not selected.
+He-Spleen-2020,candidate,,scRNAseq,he-organs-2020@2023-12-21/spleen,,,Cell_type_in_merged_data,symbol,Screened candidate; not selected.
+He-Stomach-2020,candidate,,scRNAseq,he-organs-2020@2023-12-21/stomach,,,reclustered.broad,symbol,Screened candidate; not selected.
+Kotliarov-PBMC-2020,candidate,,scRNAseq,kotliarov-pbmc-2020@2024-04-18,,,hto_classification,symbol,Screened candidate; not selected.
+Lawlor-Pancreas-2017,candidate,,scRNAseq,lawlor-pancreas-2017@2023-12-17,,,cell.type,symbol,Screened candidate; not selected.
+Liu-2024,candidate,,csv,Liu_purified.csv,,,Ground_Truth_Celltype,symbol,Screened candidate; not selected.
+MacParland-Liver-Norm-2018,candidate,,tsv,exprMatrix.tsv.gz + meta.tsv,,,CellType,symbol,Fine-granularity variant of the S9 dataset; not selected.
+Macosko-Retina-2015-15k,candidate,,scRNAseq,macosko-retina-2015@2023-12-19,,,cluster,symbol,Screened candidate; not selected.
+Macosko-Retina-2015-3k,candidate,,scRNAseq,macosko-retina-2015@2023-12-19,,,cluster,symbol,Screened candidate; not selected.
+Muraro-Pancreas-2016,candidate,,scRNAseq,muraro-pancreas-2016@2023-12-19,,,label,symbol,Screened candidate; not selected.
+PBMC3k,candidate,,seurat-rds,SeuratData pbmc3k,,,seurat_annotations,symbol,Screened candidate; not selected.
+PBMCBench,3,,seurat-rds,PBMCBench_Seurat.rds,GEO GSE132044,,Ground_Truth_Celltype,symbol,Phase 3 PBMC block; split by platform into 10xv2/Drop-seq/inDrops/Seq-well arms.
+Petropoulos-2016,candidate,,tsv,Petropoulos_2016_PMID_27062923.counts.gz,,,raw_annotation,symbol,Screened candidate; not selected.
+Segerstolpe-Pancreas-2016,"2,3",,scRNAseq,segerstolpe-pancreas-2016@2023-12-19,ArrayExpress E-MTAB-5061,,inferred.cell.type,symbol,Smart-seq2 arm of the Phase 3 Pancreas block; labels harmonised to Baron by stripping ' cell'.
+Shekhar-Retina-2016,candidate,,scRNAseq,shekhar-retina-2016@2023-12-19,,,CLUSTER,symbol,Screened candidate; not selected.
+Tabula Muris-FACS-15k,candidate,,csv,metadata.csv + FACS count matrices,,,cell_ontology_class,mouse-uppercase,Larger variant of the S5 dataset; not selected.
+Tasic-Brain-Broad-2016,candidate,,scRNAseq,tasic-brain-2016@2024-04-18,,,broad_type,symbol,Screened candidate; not selected.
+Tasic-Brain-Norm-2016,candidate,,scRNAseq,tasic-brain-2016@2024-04-18,,,primary_type,symbol,Screened candidate; not selected.
+Tian-Cellbench-10x-5cl-2019,3,,seurat-rds,CellBench sc_10x_5cl,GEO GSE118767,,cell_line_demuxlet,symbol,Phase 3 CellBench block; cell-line mixtures.
+Xin-Pancreas-2016,candidate,,scRNAseq,xin-pancreas-2016@2023-12-19,,,cell.type,symbol,Screened candidate; not selected.
+Zeisel-Brain-lvl1-2015,candidate,,scRNAseq,zeisel-brain-2015@2023-12-14,,,level1class,mouse-uppercase,Screened candidate; not selected.
+Zeisel-Brain-lvl2-2015,candidate,,scRNAseq,zeisel-brain-2015@2023-12-14,,,level2class,mouse-uppercase,Screened candidate; not selected.
+Zeisel-Nervous-2018,candidate,,scRNAseq,zeisel-nervous-2018@2023-12-22,,,Class,mouse-uppercase,Screened candidate; not selected.
+Zhao-Immune-Broad-2020,candidate,,scRNAseq,zhao-immune-2020@2023-12-22,,,broad,ensembl-to-hgnc,Broad-granularity variant of the S7 dataset; not selected.
+Zheng-Zheng68k,candidate,,10x-mtx,counts.mtx + genes.tsv + barcodes.tsv,,,celltype,symbol,Screened candidate; not selected.
+Zheng-ZhengSort-TCell-5cl,candidate,,csv,Filtered_DownSampled_SortedPBMC_data.csv + Labels.csv,,,Ground_Truth_Celltype,symbol,T-cell-only variant of the S8 dataset; not selected.
+Zilionis-Lung-2019,candidate,,scRNAseq,zilionis-lung-2019@2023-12-20/human,,,Most.likely.LM22.cell.type,symbol,Screened candidate; not selected.
+Tian-Cellbench-CelSeq2-5cl-2019,3,,seurat-rds,CellBench sc_celseq2_5cl,GEO GSE118767,,cell_line,symbol,Phase 3 CellBench block; cell-line mixture. Preprocessed by as-run/preprocessing/cross-platform/.
+Tian-Cellbench-Dropseq-5cl-2019,3,,seurat-rds,CellBench sc_dropseq_5cl,GEO GSE118767,,cell_line,symbol,Phase 3 CellBench block; cell-line mixture. Preprocessed by as-run/preprocessing/cross-platform/.

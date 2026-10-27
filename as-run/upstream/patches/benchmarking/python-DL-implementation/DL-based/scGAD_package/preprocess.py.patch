@@ -1,0 +1,8 @@
+--- aimeeyaoyao/scGAD@3328eda/code/preprocess.py
++++ as-run/benchmarking/python-DL-implementation/DL-based/scGAD_package/preprocess.py
+@@ -4 +4 @@
+-import utils as utils
++from scGAD_package import utils as utils
+@@ -9 +9 @@
+-import scanpy.api as sc
++import scanpy as sc

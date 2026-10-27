@@ -1,0 +1,12 @@
+# Python used by reproduce/ on the author's Mac (miniforge), versions read from the imported modules.
+# (pip freeze in this environment reports stale metadata for conda-installed packages, so it is not used.)
+# python 3.12.8 (macOS-26.3-arm64-arm-64bit)
+numpy==2.3.3
+pandas==2.3.2
+scipy==1.16.2
+statsmodels==0.14.5
+matplotlib==3.10.0
+pillow==11.1.0
+seaborn==0.13.2
+scikit-learn==1.7.2
+# Also needed: cairosvg (Figure 1 only; not installed on this Mac). Optional: SciencePlots (setup_style.py falls back without it); pypdf/PyMuPDF (only the vendored QA helpers).

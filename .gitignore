@@ -9,6 +9,7 @@
 .ipynb_checkpoints/
 .jupyter/
 .claude/
+Rplots.pdf
 
 # Python
 __pycache__/
@@ -19,8 +20,8 @@ venv/
 scsa_env/
 *_env/
 
-# Data and outputs. This repository intentionally contains no data: see the
-# "Deliberately not here" section of README.md.
+# Data and outputs. Data are not in git: the benchmarked objects and all result
+# tables are in the Zenodo data bundle (see README.md).
 *.rds
 *.Rds
 *.h5ad
@@ -30,17 +31,32 @@ scsa_env/
 *.db
 *.xlsx
 
-# Tabular data. datasets.csv is the exception -- it is configuration, not data.
+# Tabular data. The exceptions are configuration and manifests, not data.
 *.tsv
 *.tsv.gz
 *.csv
-!01-data-preparation/preprocessing/datasets.csv
+!/harness/01-data-preparation/preprocessing/datasets.csv
+!/as-run/MANIFEST.tsv
+!/as-run/upstream/UPSTREAM.tsv
+!/reproduce/MANIFEST.tsv
+
+# Upstream files with no licence, restored locally by as-run/fetch_upstream.py.
+# They are not redistributed; the pins and patches are in as-run/upstream/.
+/as-run/benchmarking/python-DL-implementation/DL-based/scGAD_package/*.py
+/as-run/benchmarking/python-DL-implementation/DL-based/scSemiCluster_package/*.py
+/as-run/benchmarking/python-DL-implementation/DL-based/scSemiGAN_package/*.py
+!/as-run/benchmarking/python-DL-implementation/DL-based/*_package/__init__.py
+/as-run/benchmarking/python-DL-implementation/DL-based/run_CIForm_helper.py
+/as-run/benchmarking/python-DL-implementation2/run_CIForm_helper.py
 
 # Run artefacts and figures. The scripts that produce them are included.
 *.log
 *.png
 *.pdf
 *.svg
-results/
+/results/
+/data/
 recent_run_data/
 logs/
+reproduce_logs/
+reproduce_figures/

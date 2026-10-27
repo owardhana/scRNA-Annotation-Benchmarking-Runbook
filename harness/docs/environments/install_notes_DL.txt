@@ -1,0 +1,86 @@
+# Per-tool conda environments for the Python deep-learning and semi-supervised tools.
+#
+# These are the install recipes as recorded while the study ran, corrected only where a
+# line could not run as written (typos, non-package names, broken version syntax). They
+# are the only record of the workstation environments: no environment exports were kept,
+# so packages left unpinned here were resolved at install time. The original, uncorrected
+# notes are in as-run/benchmarking/python-DL-implementation/Install Notes DL.txt.
+#
+# Not recorded: scBalance_env, Cell_BLAST_env, MARS_env and the CellTypist environment.
+# Their wrappers' imports show what each needs (scBalance, Cell_BLAST, torch; MARS: torch;
+# all: anndata, memory_profiler). Recipes for tools with no released wrapper are left out
+# here and remain in the original notes: scDeepInsight, scnym, mtANN and ItClust (see
+# docs/tool-roster.md), and scNAME, which was set up but is not in the reported panel.
+
+$ conda create -n scDeepSort_env python=3.8
+$ conda activate scDeepSort_env
+$ pip install /path/to/scDeepSort-v1.0-cu102.tar.gz   # source tarball, not on PyPI
+$ conda install conda-forge::anndata openpyxl
+
+$ conda create -n scHash_env python=3.8 -y
+$ conda activate scHash_env
+$ conda install pytorch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 cudatoolkit=10.2 -c pytorch -y
+$ conda install -c conda-forge \
+    scipy==1.9.3 \
+    numpy==1.23.5 \
+    scikit-learn==1.1.3 \
+    pandas==1.5.3 \
+    matplotlib==3.6.3 -y
+
+$ pip install "pip<24.1"
+$ pip install pytorch-lightning==1.6.4 anndata==0.8.0 scanpy==1.9.1
+$ pip install scHash --no-deps
+
+$ conda create -n TOSICA_env python=3.8 
+$ conda activate TOSICA_env
+$ conda install scanpy anndata numpy pandas
+$ conda install pytorch=1.7.1 torchvision=0.8.2 torchaudio=0.7.2 cudatoolkit=10.1 -c pytorch
+$ pip install git+https://github.com/JackieHanLab/TOSICA.git
+$ pip install memory_profiler
+
+$ conda create -n scMMT_env python=3.10
+$ conda activate scMMT_env
+$ pip install scMMT
+$ conda install -c conda-forge -c pytorch scanpy anndata numpy pandas pytorch scikit-learn scipy tqdm
+$ pip install memory_profiler
+
+$ conda create -n CIForm_env python=3.9.12
+$ conda activate CIForm_env
+$ conda install -c conda-forge -c pytorch scanpy anndata numpy pandas pytorch scikit-learn scipy
+$ pip install memory_profiler
+
+$ conda create -n SCANVI_env   # Python version not recorded
+$ conda activate SCANVI_env
+$ conda install scanpy numpy pandas scikit-learn scvi ipykernel
+$ python -m ipykernel install --user --name=SCANVI_env --display-name="SCANVI_env"
+$ pip install memory_profiler
+
+$ conda create -n ACTINN_env python=3.9 -y
+$ conda activate ACTINN_env
+$ pip install --upgrade pip
+$ pip install numpy pandas tensorflow scipy scanpy anndata   # scanpy/anndata: the wrapper's generated script imports them
+$ pip install memory_profiler
+
+$ conda create -n scSemiCluster_env python=3.7 tensorflow-gpu=1.14 keras=2.2.4 scanpy=1.4.4 scikit-learn=0.22.2 igraph pandas numpy=1.16.5 anndata=0.6.22 ipykernel memory_profiler -c conda-forge -c bioconda
+$ conda activate scSemiCluster_env
+$ conda install cudatoolkit=10.0
+$ pip install jgraph==0.2.1
+$ python -m ipykernel install --user --name=scSemiCluster_env --display-name="scSemiCluster_env"
+
+$ conda create -n scSemiGAN_env python=3.7 tensorflow-gpu=1.13.1 scanpy=1.4.4 umap-learn=0.3.9 scikit-learn=0.22.2 numpy=1.16.5 h5py=2.10.0 pandas anndata=0.6.22 -c conda-forge -c bioconda
+$ conda activate scSemiGAN_env
+$ pip install ipykernel memory_profiler
+$ python -m ipykernel install --user --name=scSemiGAN_env --display-name="scSemiGAN_env"
+
+$ conda create -n scGAD_env python=3.7 pytorch=1.10.2 cudatoolkit=10.2 scanpy=1.4.4 scikit-learn=0.20.4 scipy=1.1.0 tqdm=4.64.1 ipykernel memory_profiler -c pytorch -c conda-forge -c bioconda
+$ conda activate scGAD_env
+$ pip install jgraph==0.2.1
+$ conda install libtiff
+$ python -m ipykernel install --user --name=scGAD_env --display-name="scGAD_env"
+
+$ conda create -n cell2sentence_env python=3.8
+$ conda activate cell2sentence_env
+$ pip install cell2sentence==1.1.0
+$ pip install flash-attn --no-build-isolation
+$ pip install ipykernel memory_profiler
+$ python -m ipykernel install --user --name=cell2sentence_env --display-name="cell2sentence_env"

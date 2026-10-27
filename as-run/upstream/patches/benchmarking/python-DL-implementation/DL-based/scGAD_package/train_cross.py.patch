@@ -1,0 +1,25 @@
+--- aimeeyaoyao/scGAD@3328eda/code/train_cross.py
++++ as-run/benchmarking/python-DL-implementation/DL-based/scGAD_package/train_cross.py
+@@ -8 +8 @@
+-from layers import ZINBLoss, MeanAct, DispAct, GaussianNoise
++from scGAD_package.layers import ZINBLoss, MeanAct, DispAct, GaussianNoise
+@@ -13 +13 @@
+-from preprocess import *
++from scGAD_package.preprocess import *
+@@ -22 +22 @@
+-from augmentation import *
++from scGAD_package.augmentation import *
+@@ -251 +251 @@
+-    source_Y = np.concatenate(source_Y).astype(np.int)
++    source_Y = np.concatenate(source_Y).astype(int)
+@@ -276 +276 @@
+-    count_X = X.astype(np.int)
++    count_X = X.astype(int)
+@@ -295 +295 @@
+-        high_variable = np.array(adata.var.highly_variable.index, dtype=np.int)
++        high_variable = np.array(adata.var.highly_variable.index, dtype=int)
+@@ -298,2 +298,2 @@
+-        select_genes = np.array(adata.var.index, dtype=np.int)
+-        select_cells = np.array(adata.obs.index, dtype=np.int)
++        select_genes = np.array(adata.var.index, dtype=int)
++        select_cells = np.array(adata.obs.index, dtype=int)

@@ -1,0 +1,41 @@
+cff-version: 1.2.0
+message: >-
+  If you use this code, please cite the article below. To cite the code itself,
+  use the Zenodo DOI of the release you used.
+title: "scRNA-Annotation-Benchmarking-Runbook"
+abstract: >-
+  Code for a benchmark of 63 single-cell RNA-seq cell-type annotation tool
+  configurations under a Taguchi L9(3^4) factorial simulation, a matched
+  real-data panel, cross-platform transfer, database- and LLM-driven
+  annotation, and fine-tuned foundation models. Contains the reference
+  benchmarking harness, the code exactly as executed, and scripts that
+  regenerate every published figure and statistic from the deposited data.
+type: software
+authors:
+  - family-names: Wardhana
+    given-names: Oliver
+    email: owardhan@nd.edu
+    affiliation: "Department of Biological Sciences, University of Notre Dame"
+repository-code: "https://github.com/owardhana/scRNA-Annotation-Benchmarking-Runbook"
+license: MIT
+version: "1.0.1"
+doi: 10.5281/zenodo.23698288
+keywords:
+  - single-cell RNA-seq
+  - cell-type annotation
+  - benchmarking
+  - foundation models
+  - large language models
+preferred-citation:
+  type: article
+  title: "Reference dataset structure outweighs method choice in single-cell cell-type annotation"
+  authors:
+    - family-names: Wardhana
+      given-names: Oliver
+      affiliation: "Department of Biological Sciences, University of Notre Dame"
+    - family-names: Zeng
+      given-names: Ziyu
+      affiliation: "Department of Biological Sciences, University of Notre Dame"
+    - family-names: Lu
+      given-names: Xin
+      affiliation: "Department of Biological Sciences, University of Notre Dame"

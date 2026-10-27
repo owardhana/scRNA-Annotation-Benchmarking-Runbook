@@ -1,0 +1,65 @@
+L9 ORTHOGONAL ARRAY BENCHMARK — MASTER SUMMARY
+======================================================================
+Generated : 2026-03-25 02:37:28.232905
+Output dir: l9_benchmark_sets
+
+EXPERIMENTAL DESIGN
+----------------------------------------------------------------------
+Design     : Taguchi L9(3^4) orthogonal array
+Dimensions : 4 factors at 3 levels each
+Scenarios  : 9 (instead of 81 for full 3^4 factorial)
+Replicates : 3 per scenario (seeds: 42, 123, 999)
+Datasets   : 27 total
+
+DIMENSION LEVELS
+----------------------------------------------------------------------
+Cell count  : 500 / 3,000 / 15,000
+Imbalance   : Balanced / Mild (R=5) / Severe (R=20)
+Num types   : 5 / 15 / 30
+DE signal   : Easy (FC_up≈4.8x, 15% DE) / Medium (FC_up≈2.4x, 8% DE) / Hard (FC_up≈1.5x, 4% DE)
+
+FIXED PARAMETERS (all scenarios)
+----------------------------------------------------------------------
+nGenes       : 10000
+bcv.common   : 0.4
+lib.loc      : 8.5  (median ~4915 UMI/cell)
+lib.scale    : 0.5
+dropout.type : none  (NB handles zeros — Svensson 2020)
+de.facScale  : 0.4
+
+L9 SCENARIO MATRIX
+----------------------------------------------------------------------
+ID    Cells       Imbalance   Types     DE        Description
+----------------------------------------------------------------------
+S1    500         balanced    5         easy      Small n, balanced, few types, easy DE — baseline low-stress scenario
+S2    500         mild        15        medium    Small n, mild imbalance, moderate types, medium DE
+S3    500         severe      30        hard      Small n, severe imbalance, many types, hard DE — stress test (rarest type ~2-3 cells)
+S4    3000        balanced    15        hard      Medium n, balanced, moderate types, hard DE — tests signal difficulty at moderate scale
+S5    3000        mild        30        easy      Medium n, mild imbalance, many types, easy DE — tests scalability with many types
+S6    3000        severe      5         medium    Medium n, severe imbalance, few types, medium DE — imbalance effect at medium scale
+S7    15000       balanced    30        medium    Large n, balanced, many types, medium DE — scalability with complex taxonomy
+S8    15000       mild        5         hard      Large n, mild imbalance, few types, hard DE — tests whether scale compensates for weak signal
+S9    15000       severe      15        easy      Large n, severe imbalance, moderate types, easy DE — imbalance effect at large scale
+
+NOTES
+----------------------------------------------------------------------
+S3 WARNING: 500 cells + severe imbalance + 30 types → rarest type ~2-3 cells.
+            Retained as stress-test. Methods that fail completely → kappa = NA.
+
+DOWNSTREAM ANALYSIS
+----------------------------------------------------------------------
+Primary metric : Cohen's kappa (accounts for class imbalance)
+Secondary      : Macro F1 (equal weight per cell type)
+Ranking test   : Friedman test + Nemenyi post-hoc (Demsar 2006)
+Effect sizes   : eta-squared from lm(kappa ~ cell_count + imbalance +
+                 n_types + de_signal) — orthogonality ensures unconfounded
+                 decomposition of variance
+
+KEY REFERENCES
+----------------------------------------------------------------------
+Zappia et al. (2017) Genome Biology 18:174. [Splatter]
+Abdelaal et al. (2019) Genome Biology 20:194. [Annotation benchmark]
+Svensson (2020) Nature Biotechnology 38:147. [Dropout model]
+Demsar (2006) JMLR 7:1-30. [Statistical comparison framework]
+Taguchi (1987) / Roy (1990). [L9 orthogonal array design]
+Luecken & Theis (2019) Mol Sys Bio 15:e8746. [Best practices]
