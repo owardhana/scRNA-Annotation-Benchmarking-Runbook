@@ -8,7 +8,7 @@ paper does not require re-running any annotation tool.
 ## Quick start
 
 ```bash
-# 1. Download the data bundle from Zenodo (doi:10.5281/zenodo.23695089) and unzip it somewhere writable.
+# 1. Download the data bundle from Zenodo (doi:10.5281/zenodo.23695090) and unzip it somewhere writable.
 #    Check it:  (cd <bundle> && shasum -a 256 -c MANIFEST.sha256)
 # 2. Run, from the repository root:
 reproduce/run_all.sh <bundle> numbers    # every statistic in the text   (Python, ~5 min)

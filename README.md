@@ -13,7 +13,7 @@ real panel matched to it, cross-platform transfer, database- and LLM-driven
 annotation, and foundation-model fine-tuning.
 
 **Data.** The processed input objects and every per-run result table are on
-Zenodo, [doi:10.5281/zenodo.23695089](https://doi.org/10.5281/zenodo.23695089). Raw data are at their original
+Zenodo, [doi:10.5281/zenodo.23695090](https://doi.org/10.5281/zenodo.23695090). Raw data are at their original
 accessions, listed in
 [`harness/01-data-preparation/preprocessing/datasets.csv`](harness/01-data-preparation/preprocessing/datasets.csv)
 and in Supplementary Table 1 of the paper.
@@ -34,7 +34,7 @@ and in Supplementary Table 1 of the paper.
 There are two levels, and they come with different guarantees.
 
 **1. From the deposited results (exact).** Download the data bundle from Zenodo
-([doi:10.5281/zenodo.23695089](https://doi.org/10.5281/zenodo.23695089)), unzip it, then:
+([doi:10.5281/zenodo.23695090](https://doi.org/10.5281/zenodo.23695090)), unzip it, then:
 
 ```bash
 reproduce/run_all.sh /path/to/bundle numbers
@@ -89,9 +89,9 @@ in the scripts resolve.
 ## Citation
 
 Please cite the article above. To cite the data, use
-[doi:10.5281/zenodo.23695089](https://doi.org/10.5281/zenodo.23695089); to cite the code, use
-[doi:10.5281/zenodo.23698288](https://doi.org/10.5281/zenodo.23698288). Both DOIs cover all versions and open the
-latest one. The metadata are in [`CITATION.cff`](CITATION.cff).
+[doi:10.5281/zenodo.23695090](https://doi.org/10.5281/zenodo.23695090); to cite the code, use
+[doi:10.5281/zenodo.23698288](https://doi.org/10.5281/zenodo.23698288). The metadata are in
+[`CITATION.cff`](CITATION.cff).
 
 ## License
 
